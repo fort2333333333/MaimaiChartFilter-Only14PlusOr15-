@@ -17,7 +17,9 @@
     "touch": "134",
     "break": "222",
     "total": "2222",
-    "cover": "1656.png"
+    "cover": "1656.png",
+    "designers": ["Xaleid◆scopiX"],
+    "tag": ["KaleidScope"]
   },
   {
     "No.": "1421",
@@ -37,7 +39,9 @@
     "touch": "90",
     "break": "100",
     "total": "1400",
-    "cover": "1421.png"
+    "cover": "1421.png",
+    "designers": ["BEYOND THE MEMORIES"],
+    "tag": ["KOP决赛曲"]
   },
   {
     "No.": "840",
@@ -57,7 +61,9 @@
     "touch": "0",
     "break": "15",
     "total": "1342",
-    "cover": "840.png"
+    "cover": "840.png",
+    "designers": ["PANDORA PARADOXXX"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "1757",
@@ -77,7 +83,9 @@
     "touch": "77",
     "break": "77",
     "total": "1285",
-    "cover": "1757.png"
+    "cover": "1757.png",
+    "designers": ["シチミヘルツ"],
+    "tag": ["KOP决赛曲"]
   },
   {
     "No.": "1656",
@@ -97,7 +105,9 @@
     "touch": "93",
     "break": "221",
     "total": "2181",
-    "cover": "1656.png"
+    "cover": "1656.png",
+    "designers": ["KALEIDXSCOPE"],
+    "tag": ["KaleidScope"]
   },
   {
     "No.": "1653",
@@ -117,7 +127,9 @@
     "touch": "115",
     "break": "123",
     "total": "1322",
-    "cover": "1653.png"
+    "cover": "1653.png",
+    "designers": ["鳩ホルダー"],
+    "tag": ["KaleidScope"]
   },
   {
     "No.": "1584",
@@ -137,7 +149,9 @@
     "touch": "82",
     "break": "107",
     "total": "1058",
-    "cover": "1584.png"
+    "cover": "1584.png",
+    "designers": ["Luxizhel","サファ太"],
+    "tag": ["KOP决赛曲","KaleidScope"]
   },
   {
     "No.": "1388",
@@ -157,7 +171,9 @@
     "touch": "29",
     "break": "77",
     "total": "1316",
-    "cover": "1388.png"
+    "cover": "1388.png",
+    "designers": ["サファ太","翠楼屋"],
+    "tag": ["完美挑战曲","project_raputa"]
   },
   {
     "No.": "1367",
@@ -177,7 +193,9 @@
     "touch": "64",
     "break": "154",
     "total": "1371",
-    "cover": "1367.png"
+    "cover": "1367.png",
+    "designers": ["サファ太","シチミヘルツ"],
+    "tag": []
   },
   {
     "No.": "1190",
@@ -197,7 +215,9 @@
     "touch": "94",
     "break": "100",
     "total": "1234",
-    "cover": "1190.png"
+    "cover": "1190.png",
+    "designers": ["翠楼屋"],
+    "tag": []
   },
   {
     "No.": "1143",
@@ -217,7 +237,9 @@
     "touch": "80",
     "break": "73",
     "total": "973",
-    "cover": "1143.png"
+    "cover": "1143.png",
+    "designers": ["シチミヘルツ"],
+    "tag": []
   },
   {
     "No.": "1127",
@@ -237,7 +259,9 @@
     "touch": "24",
     "break": "57",
     "total": "1038",
-    "cover": "1127.png"
+    "cover": "1127.png",
+    "designers": ["シチミヘルツ","隅田川星人"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "840",
@@ -257,7 +281,9 @@
     "touch": "0",
     "break": "77",
     "total": "1309",
-    "cover": "840.png"
+    "cover": "840.png",
+    "designers": ["PANDORA BOXXX"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "839",
@@ -277,7 +303,9 @@
     "touch": "0",
     "break": "15",
     "total": "1057",
-    "cover": "839.png"
+    "cover": "839.png",
+    "designers": ["サファ太"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "835",
@@ -297,7 +325,9 @@
     "touch": "0",
     "break": "2",
     "total": "875",
-    "cover": "835.png"
+    "cover": "835.png",
+    "designers": ["Jack","はっぴー"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "834",
@@ -317,7 +347,9 @@
     "touch": "0",
     "break": "90",
     "total": "1181",
-    "cover": "834.png"
+    "cover": "834.png",
+    "designers": ["Garakuta Scramble!"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "1713",
@@ -337,7 +369,9 @@
     "touch": "110",
     "break": "150",
     "total": "1192",
-    "cover": "1713.png"
+    "cover": "1713.png",
+    "designers": ["サファ太"],
+    "tag": []
   },
   {
     "No.": "1708",
@@ -357,7 +391,9 @@
     "touch": "71",
     "break": "92",
     "total": "1076",
-    "cover": "1708.png"
+    "cover": "1708.png",
+    "designers": ["柠檬","サファ太"],
+    "tag": []
   },
   {
     "No.": "1629",
@@ -377,7 +413,9 @@
     "touch": "118",
     "break": "122",
     "total": "1046",
-    "cover": "1629.png"
+    "cover": "1629.png",
+    "designers": ["サファ太","ロシェ@ペンギン"],
+    "tag": ["KaleidScope"]
   },
   {
     "No.": "1539",
@@ -397,7 +435,9 @@
     "touch": "69",
     "break": "100",
     "total": "1225",
-    "cover": "1539.png"
+    "cover": "1539.png",
+    "designers": ["鳩ホルダー"],
+    "tag": []
   },
   {
     "No.": "1538",
@@ -417,27 +457,31 @@
     "touch": "25",
     "break": "135",
     "total": "1125",
-    "cover": "1538.png"
+    "cover": "1538.png",
+    "designers": ["シチミヘルツ","Luxizhel"],
+    "tag": ["KaleidScope"]
   },
   {
-  "No.": "1498",
-  "title": "ℝ∈Χ LUNATiCA",
-  "note_designer": "BELiZHEL",
-  "type": "DX",
-  "difficulty": "MASTER",
-  "artist": "Kai",
-  "level": "14+",
-  "internal_level": "14.8",
-  "bpm": "230",
-  "version": "BUDDiES+",
-  "released_date": "2024-08-02",
-  "tap": "826",
-  "hold": "49",
-  "slide": "123",
-  "touch": "29",
-  "break": "76",
-  "total": "1103",
-  "cover": "1498.png"
+    "No.": "1498",
+    "title": "ℝ∈Χ LUNATiCA",
+    "note_designer": "BELiZHEL",
+    "type": "DX",
+    "difficulty": "MASTER",
+    "artist": "Kai",
+    "level": "14+",
+    "internal_level": "14.8",
+    "bpm": "230",
+    "version": "BUDDiES+",
+    "released_date": "2024-08-02",
+    "tap": "826",
+    "hold": "49",
+    "slide": "123",
+    "touch": "29",
+    "break": "76",
+    "total": "1103",
+    "cover": "1498.png",
+    "designers": ["Luxizhel"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1412",
@@ -457,7 +501,9 @@
     "touch": "121",
     "break": "64",
     "total": "1111",
-    "cover": "1412.png"
+    "cover": "1412.png",
+    "designers": ["Jack"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1289",
@@ -477,7 +523,9 @@
     "touch": "72",
     "break": "85",
     "total": "1064",
-    "cover": "1289.png"
+    "cover": "1289.png",
+    "designers": ["翠楼屋"],
+    "tag": []
   },
   {
     "No.": "1183",
@@ -497,7 +545,9 @@
     "touch": "76",
     "break": "88",
     "total": "1105",
-    "cover": "1183.png"
+    "cover": "1183.png",
+    "designers": ["maimai Fumen All-Stars"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1176",
@@ -517,7 +567,9 @@
     "touch": "228",
     "break": "25",
     "total": "956",
-    "cover": "1176.png"
+    "cover": "1176.png",
+    "designers": ["谱面100号"],
+    "tag": []
   },
   {
     "No.": "1012",
@@ -537,7 +589,9 @@
     "touch": "45",
     "break": "77",
     "total": "1169",
-    "cover": "1012.png"
+    "cover": "1012.png",
+    "designers": ["隅田川星人"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "943",
@@ -557,7 +611,9 @@
     "touch": "33",
     "break": "135",
     "total": "1092",
-    "cover": "943.png"
+    "cover": "943.png",
+    "designers": ["小鳥遊さん","シチミヘルツ"],
+    "tag": []
   },
   {
     "No.": "839",
@@ -577,7 +633,9 @@
     "touch": "0",
     "break": "22",
     "total": "1057",
-    "cover": "839.png"
+    "cover": "839.png",
+    "designers": ["小鳥遊さん"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "838",
@@ -597,7 +655,9 @@
     "touch": "0",
     "break": "46",
     "total": "1167",
-    "cover": "838.png"
+    "cover": "838.png",
+    "designers": ["小鳥遊さん"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "836",
@@ -617,7 +677,9 @@
     "touch": "0",
     "break": "71",
     "total": "1137",
-    "cover": "836.png"
+    "cover": "836.png",
+    "designers": ["小鳥遊さん"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "834",
@@ -637,7 +699,9 @@
     "touch": "0",
     "break": "64",
     "total": "1105",
-    "cover": "834.png"
+    "cover": "834.png",
+    "designers": ["チャン@DP皆伝"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "784",
@@ -657,7 +721,9 @@
     "touch": "0",
     "break": "47",
     "total": "1188",
-    "cover": "784.png"
+    "cover": "784.png",
+    "designers": ["譜面ボーイズからの挑戦状"],
+    "tag": []
   },
   {
     "No.": "783",
@@ -677,7 +743,9 @@
     "touch": "0",
     "break": "39",
     "total": "1086",
-    "cover": "783.png"
+    "cover": "783.png",
+    "designers": ["サファ太"],
+    "tag": []
   },
   {
     "No.": "755",
@@ -697,7 +765,9 @@
     "touch": "0",
     "break": "74",
     "total": "1173",
-    "cover": "755.png"
+    "cover": "755.png",
+    "designers": ["Jack"],
+    "tag": []
   },
   {
     "No.": "711",
@@ -717,7 +787,9 @@
     "touch": "0",
     "break": "4",
     "total": "974",
-    "cover": "711.png"
+    "cover": "711.png",
+    "designers": ["小鳥遊さん"],
+    "tag": []
   },
   {
     "No.": "616",
@@ -737,7 +809,9 @@
     "touch": "0",
     "break": "9",
     "total": "999",
-    "cover": "616.png"
+    "cover": "616.png",
+    "designers": ["はっぴー"],
+    "tag": []
   },
   {
     "No.": "566",
@@ -757,7 +831,9 @@
     "touch": "0",
     "break": "54",
     "total": "1150",
-    "cover": "566.png"
+    "cover": "566.png",
+    "designers": ["合作だよ"],
+    "tag": []
   },
   {
     "No.": "403",
@@ -777,7 +853,9 @@
     "touch": "0",
     "break": "29",
     "total": "1010",
-    "cover": "403.png"
+    "cover": "403.png",
+    "designers": ["小鳥遊さん"],
+    "tag": []
   },
   {
     "No.": "273",
@@ -797,7 +875,9 @@
     "touch": "0",
     "break": "15",
     "total": "880",
-    "cover": "273.png"
+    "cover": "273.png",
+    "designers": ["チャン@DP皆伝"],
+    "tag": []
   },
   {
     "No.": "268",
@@ -817,7 +897,9 @@
     "touch": "72",
     "break": "112",
     "total": "1096",
-    "cover": "268.png"
+    "cover": "268.png",
+    "designers": ["Luxizhel"],
+    "tag": ["KOP决赛曲"]
   },
   {
     "No.": "1752",
@@ -837,7 +919,9 @@
     "touch": "150",
     "break": "21",
     "total": "1052",
-    "cover": "1752.png"
+    "cover": "1752.png",
+    "designers": ["Luxizhel","はっぴー","カマボコ君"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1613",
@@ -857,7 +941,9 @@
     "touch": "28",
     "break": "109",
     "total": "1045",
-    "cover": "1613.png"
+    "cover": "1613.png",
+    "designers": ["Luxizhel"],
+    "tag": []
   },
   {
     "No.": "1477",
@@ -877,7 +963,9 @@
     "touch": "59",
     "break": "21",
     "total": "1189",
-    "cover": "1477.png"
+    "cover": "1477.png",
+    "designers": ["アミノハバキリ"],
+    "tag": []
   },
   {
     "No.": "1421",
@@ -897,7 +985,9 @@
     "touch": "118",
     "break": "88",
     "total": "1200",
-    "cover": "1421.png"
+    "cover": "1421.png",
+    "designers": ["maimai TEAM DX"],
+    "tag": []
   },
   {
     "No.": "1387",
@@ -917,7 +1007,9 @@
     "touch": "53",
     "break": "89",
     "total": "1211",
-    "cover": "1387.png"
+    "cover": "1387.png",
+    "designers": ["ロシェ","あまくちジンジャ一"],
+    "tag": ["完美挑战曲","project_raputa"]
   },
   {
     "No.": "1375",
@@ -937,15 +1029,17 @@
     "touch": "19",
     "break": "150",
     "total": "981",
-    "cover": "1375.png"
+    "cover": "1375.png",
+    "designers": ["鳩ホルダー","Luxizhel"],
+    "tag": []
   },
   {
     "No.": "1338",
     "title": "LAMIA",
-    "note_designer": "BlackY",
+    "note_designer": "譜面ボーイズからの挑戦状",
     "type": "DX",
     "difficulty": "MASTER",
-    "artist": "譜面ボーイズからの挑戦状",
+    "artist": "BlackY",
     "level": "14+",
     "internal_level": "14.7",
     "bpm": "199",
@@ -957,7 +1051,9 @@
     "touch": "56",
     "break": "99",
     "total": "999",
-    "cover": "1338.png"
+    "cover": "1338.png",
+    "designers": ["譜面ボーイズからの挑戦状"],
+    "tag": []
   },
   {
     "No.": "1256",
@@ -977,7 +1073,9 @@
     "touch": "140",
     "break": "114",
     "total": "1129",
-    "cover": "1256.png"
+    "cover": "1256.png",
+    "designers": ["サファ太","カマボコ君"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1235",
@@ -997,7 +1095,9 @@
     "touch": "70",
     "break": "88",
     "total": "999",
-    "cover": "1235.png"
+    "cover": "1235.png",
+    "designers": ["サファ太"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1188",
@@ -1017,7 +1117,9 @@
     "touch": "71",
     "break": "16",
     "total": "954",
-    "cover": "1188.png"
+    "cover": "1188.png",
+    "designers": ["はっぴー"],
+    "tag": []
   },
   {
     "No.": "1133",
@@ -1037,7 +1139,9 @@
     "touch": "31",
     "break": "100",
     "total": "1149",
-    "cover": "1133.png"
+    "cover": "1133.png",
+    "designers": ["翠楼屋"],
+    "tag": ["KOP决赛曲"]
   },
   {
     "No.": "1087",
@@ -1057,7 +1161,9 @@
     "touch": "20",
     "break": "4",
     "total": "1016",
-    "cover": "1087.png"
+    "cover": "1087.png",
+    "designers": ["小鳥遊さん","サファ太"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "1005",
@@ -1077,7 +1183,9 @@
     "touch": "99",
     "break": "9",
     "total": "999",
-    "cover": "1005.png"
+    "cover": "1005.png",
+    "designers": ["シチミヘルツ"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "914",
@@ -1097,7 +1205,9 @@
     "touch": "131",
     "break": "37",
     "total": "1194",
-    "cover": "914.png"
+    "cover": "914.png",
+    "designers": ["Jack","小鳥遊さん"],
+    "tag": ["KOP决赛曲"]
   },
   {
     "No.": "890",
@@ -1117,7 +1227,9 @@
     "touch": "144",
     "break": "33",
     "total": "1115",
-    "cover": "890.png"
+    "cover": "890.png",
+    "designers": ["小鳥遊さん"],
+    "tag": []
   },
   {
     "No.": "833",
@@ -1137,7 +1249,9 @@
     "touch": "0",
     "break": "30",
     "total": "949",
-    "cover": "833.png"
+    "cover": "833.png",
+    "designers": ["チャン@DP皆伝"],
+    "tag": []
   },
   {
     "No.": "600",
@@ -1157,7 +1271,9 @@
     "touch": "0",
     "break": "41",
     "total": "1126",
-    "cover": "600.png"
+    "cover": "600.png",
+    "designers": ["合作だよ"],
+    "tag": []
   },
   {
     "No.": "515",
@@ -1177,7 +1293,9 @@
     "touch": "0",
     "break": "10",
     "total": "899",
-    "cover": "515.png"
+    "cover": "515.png",
+    "designers": ["サファ太"],
+    "tag": []
   },
   {
     "No.": "484",
@@ -1197,7 +1315,9 @@
     "touch": "0",
     "break": "8",
     "total": "888",
-    "cover": "484.png"
+    "cover": "484.png",
+    "designers": ["Jack"],
+    "tag": []
   },
   {
     "No.": "1748",
@@ -1217,7 +1337,9 @@
     "touch": "72",
     "break": "60",
     "total": "1143",
-    "cover": "1748.png"
+    "cover": "1748.png",
+    "designers": ["はっぴー"],
+    "tag": []
   },
   {
     "No.": "1725",
@@ -1237,7 +1359,9 @@
     "touch": "179",
     "break": "99",
     "total": "1399",
-    "cover": "1725.png"
+    "cover": "1725.png",
+    "designers": ["せめんともり"],
+    "tag": []
   },
   {
     "No.": "1718",
@@ -1257,7 +1381,9 @@
     "touch": "62",
     "break": "87",
     "total": "999",
-    "cover": "1718.png"
+    "cover": "1718.png",
+    "designers": ["Luxizhel"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1607",
@@ -1277,7 +1403,9 @@
     "touch": "72",
     "break": "124",
     "total": "1039",
-    "cover": "1607.png"
+    "cover": "1607.png",
+    "designers": ["サファ太","ぴちネコ"],
+    "tag": ["KaleidScope"]
   },
   {
     "No.": "1583",
@@ -1297,7 +1425,9 @@
     "touch": "124",
     "break": "146",
     "total": "1211",
-    "cover": "1583.png"
+    "cover": "1583.png",
+    "designers": ["サファ太","Luxizhel"],
+    "tag": ["完美挑战曲","KOP决赛曲"]
   },
   {
     "No.": "1531",
@@ -1317,7 +1447,9 @@
     "touch": "41",
     "break": "58",
     "total": "995",
-    "cover": "1531.png"
+    "cover": "1531.png",
+    "designers": ["サファ太","Luxizhel"],
+    "tag": []
   },
   {
     "No.": "1456",
@@ -1337,7 +1469,9 @@
     "touch": "97",
     "break": "74",
     "total": "949",
-    "cover": "1456.png"
+    "cover": "1456.png",
+    "designers": ["鳩ホルダー"],
+    "tag": []
   },
   {
     "No.": "1431",
@@ -1357,7 +1491,9 @@
     "touch": "39",
     "break": "66",
     "total": "1289",
-    "cover": "1431.png"
+    "cover": "1431.png",
+    "designers": ["Luxizhel"],
+    "tag": ["KOP决赛曲"]
   },
   {
     "No.": "1413",
@@ -1377,7 +1513,9 @@
     "touch": "238",
     "break": "22",
     "total": "1214",
-    "cover": "1413.png"
+    "cover": "1413.png",
+    "designers": ["ぴちネコ"],
+    "tag": []
   },
   {
     "No.": "1384",
@@ -1397,7 +1535,9 @@
     "touch": "155",
     "break": "38",
     "total": "1263",
-    "cover": "1384.png"
+    "cover": "1384.png",
+    "designers": ["ロシェ@ペンギン"],
+    "tag": ["完美挑战曲","project_raputa"]
   },
   {
     "No.": "1330",
@@ -1417,7 +1557,9 @@
     "touch": "55",
     "break": "88",
     "total": "1041",
-    "cover": "1330.png"
+    "cover": "1330.png",
+    "designers": ["Jack"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1320",
@@ -1437,7 +1579,9 @@
     "touch": "85",
     "break": "71",
     "total": "936",
-    "cover": "1320.png"
+    "cover": "1320.png",
+    "designers": ["rintaro soma"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1264",
@@ -1457,7 +1601,9 @@
     "touch": "49",
     "break": "65",
     "total": "1063",
-    "cover": "1264.png"
+    "cover": "1264.png",
+    "designers": ["Jack","小鳥遊さん","サファ太"],
+    "tag": ["KOP决赛曲"]
   },
   {
     "No.": "1216",
@@ -1477,7 +1623,9 @@
     "touch": "113",
     "break": "62",
     "total": "1167",
-    "cover": "1216.png"
+    "cover": "1216.png",
+    "designers": ["小鳥遊さん","Redarrow"],
+    "tag": []
   },
   {
     "No.": "1109",
@@ -1497,7 +1645,9 @@
     "touch": "59",
     "break": "5",
     "total": "954",
-    "cover": "1109.png"
+    "cover": "1109.png",
+    "designers": ["Jack","Licorice Gunjyo"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1097",
@@ -1517,7 +1667,9 @@
     "touch": "57",
     "break": "57",
     "total": "966",
-    "cover": "1097.png"
+    "cover": "1097.png",
+    "designers": ["隅田川星人"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1076",
@@ -1537,7 +1689,9 @@
     "touch": "125",
     "break": "35",
     "total": "1296",
-    "cover": "1076.png"
+    "cover": "1076.png",
+    "designers": ["小鳥遊さん","華火職人"],
+    "tag": []
   },
   {
     "No.": "1056",
@@ -1557,7 +1711,9 @@
     "touch": "82",
     "break": "6",
     "total": "932",
-    "cover": "1056.png"
+    "cover": "1056.png",
+    "designers": ["はっぴー"],
+    "tag": ["完美挑战曲"]
   },
   {
     "No.": "1011",
@@ -1577,7 +1733,9 @@
     "touch": "62",
     "break": "50",
     "total": "1106",
-    "cover": "1011.png"
+    "cover": "1011.png",
+    "designers": ["サファ太"],
+    "tag": ["KOP决赛曲"]
   },
   {
     "No.": "880",
@@ -1597,7 +1755,9 @@
     "touch": "50",
     "break": "31",
     "total": "1031",
-    "cover": "880.png"
+    "cover": "880.png",
+    "designers": ["某S氏"],
+    "tag": []
   },
   {
     "No.": "838",
@@ -1617,7 +1777,9 @@
     "touch": "0",
     "break": "39",
     "total": "1190",
-    "cover": "838.png"
+    "cover": "838.png",
+    "designers": ["某S氏"],
+    "tag": ["PANDORA BOXXX"]
   },
   {
     "No.": "795",
@@ -1637,7 +1799,9 @@
     "touch": "0",
     "break": "61",
     "total": "1122",
-    "cover": "795.png"
+    "cover": "795.png",
+    "designers": ["合作だよ"],
+    "tag": []
   },
   {
     "No.": "717",
@@ -1657,7 +1821,9 @@
     "touch": "0",
     "break": "3",
     "total": "733",
-    "cover": "717.png"
+    "cover": "717.png",
+    "designers": ["譜面-100号"],
+    "tag": []
   },
   {
     "No.": "601",
@@ -1677,7 +1843,9 @@
     "touch": "0",
     "break": "6",
     "total": "1068",
-    "cover": "601.png"
+    "cover": "601.png",
+    "designers": ["Revo@LC"],
+    "tag": []
   },
   {
     "No.": "515",
@@ -1697,7 +1865,9 @@
     "touch": "0",
     "break": "10",
     "total": "859",
-    "cover": "515.png"
+    "cover": "515.png",
+    "designers": ["チャン@DP皆伝"],
+    "tag": []
   },
   {
     "No.": "345",
@@ -1717,7 +1887,9 @@
     "touch": "0",
     "break": "3",
     "total": "655",
-    "cover": "345.png"
+    "cover": "345.png",
+    "designers": ["玉子豆腐"],
+    "tag": []
   },
   {
     "No.": "298",
@@ -1737,7 +1909,9 @@
     "touch": "302",
     "break": "125",
     "total": "929",
-    "cover": "298.png"
+    "cover": "298.png",
+    "designers": ["チャン@DP皆伝"],
+    "tag": []
   },
   {
     "No.": "286",
@@ -1757,6 +1931,8 @@
     "touch": "0",
     "break": "50",
     "total": "722",
-    "cover": "286.png"
+    "cover": "286.png",
+    "designers": ["チャン@DP皆伝","はっぴー"],
+    "tag": []
   }
 ]

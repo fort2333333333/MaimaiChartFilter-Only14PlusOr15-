@@ -157,6 +157,23 @@ if st.session_state.after_rerun:
     st.toast(st.session_state.after_rerun)
     st.session_state.after_rerun = ""
 
+CHARTER = ['サファ太', '小鳥遊さん', 'Luxizhel', 'Jack', 'シチミヘルツ', 'はっぴー', 'チャン@DP皆伝',
+           '鳩ホルダー', '翠楼屋', '隅田川星人', '合作だよ', '譜面ボーイズからの挑戦状', '某S氏', 'ロシェ@ペンギン',
+           'カマボコ君', 'ぴちネコ', '谱面100号', '譜面-100号', '華火職人', '玉子豆腐', '柠檬', 'ロシェ',
+           'アミノハバキリ', 'せめんともり', 'あまくちジンジャ一', 'rintaro soma', 'maimai TEAM DX',
+           'maimai Fumen All-Stars', 'Xaleid◆scopiX', 'Revo@LC', 'Redarrow', 'PANDORA PARADOXXX',
+           'PANDORA BOXXX', 'Licorice Gunjyo', 'KALEIDXSCOPE', 'Garakuta Scramble!', 'BEYOND THE MEMORIES',
+           'KOP7th -FiNAL BATTLE- by 7.3GHz', '7sRef -DOVE-', 'BELiZHEL vs Safari', 'project_raputa',
+           'Safata.GHz', '翡翠マナ', '7.3GHz -Før The Legends-', '超七味星人', '-ZONE- SaFaRi',
+           '"H"ack underground', 'Safari', 'サファ太 vs じゃこレモン', 'SΛFΛRI/RΦCHER', 'The Dove',
+           'BELiZHEL vs 7.3GHz', 'BELiZHEL', '翡翠マナ -Memoir-', 'The ALiEN', '7.3GHz vs Phoenix',
+           'Phoenix', '小鳥遊さん fused with Phoenix', '原田ひろゆき', 'Luxizhel+カマボコ君+はっぴー',
+           'EL DiABLO', '鳩サファzhel', 'ボコ太', 'KOP3rd with 翡翠マナ', '-ZONE-Phoenix', '7.3GHz',
+           'jacK on Phoenix', 'SAFARI☆CAT', 'サファ太 vs Luxizhel', 'Safazhel',
+           'jacK on Phoenix vs -ZONE- SaFaRi', 'red phoenix', 'Jack & Licorice Gunjyo',
+           '小鳥遊さん vs 華火職人', 'サファ太 vs -ZONE- SaFaRi', '舞舞10年ズ ～ファイナル～', '舞舞10年ズ (チャンとはっぴー)']
+TAG = ["完美挑战曲","KaleidScope","PANDORA BOXXX","project_raputa","KOP决赛曲"]
+
 col5, col6 = st.columns([9,1])
 with col5:
     st.title("请您越级")
@@ -170,21 +187,11 @@ col3, col4 = st.columns(2)
 with col3:
     filter_level = st.multiselect("筛选定数",["14.6","14.7","14.8","14.9","15.0"])
     filter_version = st.multiselect("筛选版本",VERSION)
-    filter_name = st.text_input("搜索曲名")
-filter_level_list = []
-filter_version_list = []
-for level in filter_level:
-    filter_level_list += find_all("internal_level","==",level)
-for version in filter_version:
-    filter_version_list += find_all("version","==",version)
-songs = [
-    s for s in songs
-    if (not filter_level or s in filter_level_list)
-    and (not filter_version or s in filter_version_list)
-    and (not filter_name or filter_name.lower() in INFO[s]["title"].lower())]
-
+    filter_charter = st.multiselect("筛选谱师",CHARTER)
+    filter_tag = st.multiselect("筛选标签",TAG)
 with col4:
-    condition_code = st.text_area("筛选其他", height=236, help="语法为 类别 运算符 数值 例如bpm>180, released_date<2026-01-01, break==100")
+    condition_code = st.text_area("筛选其他", height=236, help="语法为 类别 运算符 数值 例如bpm>=180, released_date<2026-01-01, break==100")
+    filter_name = st.text_input("搜索曲名")
 VALID_KEY = ["bpm","released_date","break","tap","hold","slide","touch","total","version","internal_level"]
 if condition_code:
     try:
@@ -232,6 +239,31 @@ if condition_code:
                 raise KeyError(f"第{index + 1}行: 没有符号")
     except Exception as e:
         st.error(e)
+filter_level_list = []
+filter_version_list = []
+filter_charter_list = []
+filter_tag_list = []
+for level in filter_level:
+    filter_level_list += find_all("internal_level","==",level)
+for version in filter_version:
+    filter_version_list += find_all("version","==",version)
+for charter in filter_charter:
+    for i in range(0,88):
+        if charter in INFO[i]["designers"] and i not in filter_charter_list:
+            filter_charter_list.append(i)
+        elif charter == INFO[i]["note_designer"] and i not in filter_charter_list:
+            filter_charter_list.append(i)
+for tag in filter_tag:
+    for i in range(0,88):
+        if tag in INFO[i]["tag"] and i not in filter_tag_list:
+            filter_tag_list.append(i)
+songs = [
+    s for s in songs
+    if (not filter_level or s in filter_level_list)
+    and (not filter_version or s in filter_version_list)
+    and (not filter_charter or s in filter_charter_list)
+    and (not filter_tag or s in filter_tag_list)
+    and (not filter_name or filter_name.lower() in INFO[s]["title"].lower())]
 
 col1, col2 = st.columns(2)
 with col1:
@@ -246,7 +278,7 @@ col10, col11, col12, col13 = st.columns(4)
 with col10:
     if st.button("随机抽取"):
         random_song(songs)
-with col12:
+with col12  :
     if st.button("曲绘猜歌"):
         if songs:
             st.session_state.song = random.choice(songs)
