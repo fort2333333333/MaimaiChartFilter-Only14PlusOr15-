@@ -1,3 +1,2 @@
 # MaimaiChartFilter-Only14PlusOr15-
-https://maimaidx.streamlit.app/
-欢迎体验！
+包含舞萌DX所有14+和15的信息和一些猜歌游戏
