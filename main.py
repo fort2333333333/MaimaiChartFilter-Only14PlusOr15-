@@ -159,7 +159,7 @@ def setting():
     setting_search_index = st.slider("搜索曲名:模糊搜索严格度(100=无模糊搜索)",min_value=60,max_value=100,value=st.session_state.search_index)
     setting_image_size = st.slider("曲绘猜歌:曲绘裁剪大小",min_value = 10,max_value = 50,value=st.session_state.image_size)
     setting_grey = st.toggle("曲绘猜歌:显示黑白曲绘",value=st.session_state.grey)
-    setting_random_target = st.toggle("提示猜曲:随机提示",value=st.session_state.random_target)
+    setting_random_target = st.toggle("提示猜歌:随机提示",value=st.session_state.random_target)
     if st.button("保存"):
         st.session_state.search_index = setting_search_index
         st.session_state.image_size = setting_image_size
