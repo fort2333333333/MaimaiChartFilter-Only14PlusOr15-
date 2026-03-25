@@ -3,6 +3,7 @@ import random
 import streamlit as st
 from PIL import Image
 from datetime import datetime, timedelta
+from rapidfuzz import fuzz
 
 @st.cache_data
 def load_data():
@@ -126,13 +127,18 @@ def crop_cover(index,x,y, cropped_size,g):
 
 @st.dialog("曲绘猜歌")
 def random_cover(songs,CROP_SIZE,grey):
-    if st.button("再猜一首"):
-        if songs:
-            st.session_state.song = random.choice(songs)
-        else:
-            st.session_state.song = random.randint(0,87)
-        st.session_state.x = random.randint(0,190-CROP_SIZE)
-        st.session_state.y = random.randint(0,190-CROP_SIZE)
+
+    col101, col201 = st.columns([9,1])
+    with col101:
+        if st.button("再猜一首"):
+            if songs:
+                st.session_state.song = random.choice(songs)
+            else:
+                st.session_state.song = random.randint(0,87)
+            st.session_state.x = random.randint(0,190-CROP_SIZE)
+            st.session_state.y = random.randint(0,190-CROP_SIZE)
+    with col201:
+        st.image("static/image/icon/1.png")
     crop_cover(st.session_state.song,st.session_state.x,st.session_state.y,CROP_SIZE,grey)
     if st.button("看看答案"):
         print_cover(st.session_state.song)
@@ -143,14 +149,22 @@ if "image_size" not in st.session_state:
     st.session_state.image_size = 30
 if "after_rerun" not in st.session_state:
     st.session_state.after_rerun = ""
+if "search_index" not in st.session_state:
+    st.session_state.search_index = 80
+if "random_target" not in st.session_state:
+    st.session_state.random_target = False
 
 @st.dialog("设置")
 def setting():
+    setting_search_index = st.slider("搜索曲名:模糊搜索严格度(100=无模糊搜索)",min_value=60,max_value=100,value=st.session_state.search_index)
     setting_image_size = st.slider("曲绘猜歌:曲绘裁剪大小",min_value = 10,max_value = 50,value=st.session_state.image_size)
     setting_grey = st.toggle("曲绘猜歌:显示黑白曲绘",value=st.session_state.grey)
+    setting_random_target = st.toggle("提示猜曲:随机提示",value=st.session_state.random_target)
     if st.button("保存"):
+        st.session_state.search_index = setting_search_index
         st.session_state.image_size = setting_image_size
         st.session_state.grey = setting_grey
+        st.session_state.random_target = setting_random_target
         st.session_state.after_rerun = "保存成功!"
         st.rerun()
 
@@ -163,20 +177,21 @@ def random_date():
     date_str = random_date.strftime("%Y/%m/%d")
     return date_str
 
+def get_random_value(key):
+    return random.choice(INFO)[key]
+
 DESC_DESIGNER = ["Luxizhel","シチミヘルツ","Jack","翠楼屋","サファ太","鳩ホルダー"]
 DESC_LEVEL = ["14.6","14.7","14.8","14.9","15.0"]
 DESC_TAG = ["KaleidScope","PANDORA BOXXX","project_raputa","完美挑战曲","Legend曲","KOP决赛曲","KOP预选追加曲"]
-def random_description(song,target):
+def random_description(song,target,value=None):
     if target == "designers":
-        random.shuffle(DESC_DESIGNER)
-        if DESC_DESIGNER[0] in INFO[song]["designers"]:
-            return f"谱师是 {DESC_DESIGNER[0]}"
-        elif DESC_DESIGNER[1] in INFO[song]["designers"]:
-            return f"谱师是 {DESC_DESIGNER[1]}"
+        target_designer = random.choice(DESC_DESIGNER) if value == None else value
+        if target_designer in INFO[song]["designers"]:
+            return f"谱师是{target_designer}"
         else:
-            return f"谱师不是 {DESC_DESIGNER[0]} 或 {DESC_DESIGNER[1]}"
+            return f"谱师不是{target_designer}"
     elif target == "internal_level":
-        target_level = random.choice(DESC_LEVEL)
+        target_level = get_random_value("internal_level") if value == None else value
         if INFO[song]["internal_level"] > target_level:
             return f"定数大于{target_level}"
         elif INFO[song]["internal_level"] < target_level:
@@ -184,7 +199,7 @@ def random_description(song,target):
         else:
             return f"定数是{target_level}"
     elif target == "version":
-        target_version = random.choice(VERSION)
+        target_version = get_random_value("version") if value == None else value
         if condition(INFO[song]["version"],"version",">",target_version):
             return f"版本在{target_version}后"
         elif condition(INFO[song]["version"],"version","<",target_version):
@@ -192,15 +207,13 @@ def random_description(song,target):
         else:
             return f"版本是{target_version}"
     elif target == "tag":
-        random.shuffle(DESC_TAG)
-        if DESC_TAG[0] in INFO[song]["tag"]:
-            return f"曲子是{DESC_TAG[0]}"
-        elif DESC_TAG[1] in INFO[song]["tag"]:
-            return f"曲子是{DESC_TAG[1]}"
+        target_tag = random.choice(DESC_TAG) if value == None else value
+        if target_tag in INFO[song]["tag"]:
+            return f"曲子是{target_tag}"
         else:
-            return f"曲子不是{DESC_TAG[0]}或{DESC_TAG[1]}"
+            return f"曲子不是{target_tag}"
     elif target == "break":
-        target_break = random.randint(20,100)
+        target_break = int(get_random_value("break")) if value == None else value
         if int(INFO[song]["break"]) > target_break:
             return f"绝赞大于{target_break}"
         elif int(INFO[song]["break"]) < target_break:
@@ -210,7 +223,7 @@ def random_description(song,target):
     elif target == "type":
         return f"曲子是{INFO[song]["type"]}曲"
     elif target == "bpm":
-        target_bpm = random.randint(100,200)
+        target_bpm = int(get_random_value("bpm")) if value == None else value
         if int(INFO[song]["bpm"]) > target_bpm:
             return f"bpm大于{target_bpm}"
         elif int(INFO[song]["bpm"]) < target_bpm:
@@ -218,7 +231,7 @@ def random_description(song,target):
         else:
             return f"bpm等于{target_bpm}"
     elif target == "total":
-        target_total = random.randint(900,1200)
+        target_total = int(get_random_value("total")) if value == None else value
         if int(INFO[song]["total"]) > target_total:
             return f"物量大于{target_total}"
         elif int(INFO[song]["total"]) < target_total:
@@ -228,47 +241,22 @@ def random_description(song,target):
     elif target == "difficulty":
         return f"难度是{INFO[song]["difficulty"]}"
     elif target == "released_date":
-        target_date = random_date()
+        target_date = random_date() if value == None else value
         if target_date < INFO[song]["released_date"]:
             return f"在{target_date}后加入"
         elif target_date > INFO[song]["released_date"]:
             return f"在{target_date}前加入"
         else:
             return f"在{target_date}加入"
+    elif target in ["tap","hold","slide","touch"]:
+        target_count = value
+        if int(INFO[song][target]) > target_count:
+            return f"{target}比{target_count}多"
+        elif int(INFO[song][target]) < target_count:
+            return f"{target}比{target_count}少"
+        else:
+            return f"{target}是{target_count}"
     return f"卡bug了"
-
-ALL_TARGET = ["designers","internal_level","version","tag","break","type","bpm","total","difficulty",
-              "released_date"]
-ALL_TARGET_2 = ["designers","internal_level","version","tag","break","bpm","total",
-              "released_date"]
-@st.dialog("提示猜歌")
-def random_info(songs):
-    if st.button("再猜一首"):
-        if songs:
-            st.session_state.song = random.choice(songs)
-        else:
-            st.session_state.song = random.randint(0, 87)
-        st.session_state.description = ""
-        st.session_state.description_target = ALL_TARGET.copy()
-    if st.session_state.description_target == ALL_TARGET:
-        st.session_state.description += ("\n" + random_description(st.session_state.song,st.session_state.description_target.pop(random.randint(0,len(st.session_state.description_target) - 1))))
-    if st.button("继续提示"):
-        if st.session_state.description_target:
-            st.session_state.description += ("\n"+random_description(st.session_state.song,st.session_state.description_target.pop(random.randint(0,len(st.session_state.description_target)-1))))
-        else:
-            st.session_state.description_target = ALL_TARGET_2.copy()
-            st.session_state.description += ("\n" + random_description(st.session_state.song,st.session_state.description_target.pop(random.randint(0,len(st.session_state.description_target) - 1))))
-    st.text(st.session_state.description)
-    if st.button("到底是什么"):
-        col111, col222 = st.columns([1,2])
-        with col111:
-            print_cover(st.session_state.song)
-        with col222:
-            print_info(st.session_state.song)
-
-if st.session_state.after_rerun:
-    st.toast(st.session_state.after_rerun)
-    st.session_state.after_rerun = ""
 
 CHARTER = ['サファ太', '小鳥遊さん', 'Luxizhel', 'Jack', 'シチミヘルツ', 'はっぴー', 'チャン@DP皆伝',
            '鳩ホルダー', '翠楼屋', '隅田川星人', '合作だよ', '譜面ボーイズからの挑戦状', '某S氏', 'ロシェ@ペンギン',
@@ -287,24 +275,120 @@ CHARTER = ['サファ太', '小鳥遊さん', 'Luxizhel', 'Jack', 'シチミヘ�
            '小鳥遊さん vs 華火職人', 'サファ太 vs -ZONE- SaFaRi', '舞舞10年ズ ～ファイナル～', '舞舞10年ズ (チャンとはっぴー)']
 TAG = ["KaleidScope","PANDORA BOXXX","project_raputa","完美挑战曲","Legend曲","KOP决赛曲","KOP预选追加曲"]
 
-col5, col6 = st.columns([9,1])
+ALL_TARGET = ["designers","internal_level","version","tag","break","type","bpm","total","difficulty"]
+ALL_TARGET_2 = ["designers","internal_level","version","tag","break","bpm","total"]
+USER_TARGET_CHOICE = ["类型","难度","谱师","定数","版本","系列","绝赞","bpm","物量","日期","tap","hold","slide","touch"]
+USER_TARGET_TRANS = {"谱师":"designers","定数":"internal_level","版本":"version","系列":"tag","绝赞":"break",
+                     "类型":"type","bpm":"bpm","物量":"total","难度":"difficulty","tap":"tap","hold":"hold",
+                     "slide":"slide","touch":"touch","日期":"released_date"}
+@st.dialog("提示猜歌")
+def random_info(songs):
+    col301, col401 = st.columns([9,1])
+    with col301:
+        if st.button("再猜一首"):
+            if songs:
+                st.session_state.song = random.choice(songs)
+            else:
+                st.session_state.song = random.randint(0, 87)
+            st.session_state.description = ""
+            st.session_state.description_target = ALL_TARGET.copy()
+    with col401:
+        st.image("static/image/icon/1.png")
+    if st.session_state.random_target:
+        if st.session_state.description_target == ALL_TARGET:
+            st.session_state.description += ("\n" + random_description(st.session_state.song,st.session_state.description_target.pop(random.randint(0,len(st.session_state.description_target) - 1))))
+        if st.button("继续提示"):
+            if st.session_state.description_target:
+                st.session_state.description += ("\n"+random_description(st.session_state.song,st.session_state.description_target.pop(random.randint(0,len(st.session_state.description_target)-1))))
+            else:
+                st.session_state.description_target = ALL_TARGET_2.copy()
+                st.session_state.description += ("\n" + random_description(st.session_state.song,st.session_state.description_target.pop(random.randint(0,len(st.session_state.description_target) - 1))))
+    else:
+        col33, col34 = st.columns(2)
+        with col33:
+            user_target = st.selectbox("筛选问题",USER_TARGET_CHOICE)
+        with col34:
+            if user_target == "谱师":
+                USER_VALUE_CHOICE = CHARTER.copy()
+                user_value = st.selectbox("谁写的",USER_VALUE_CHOICE)
+            elif user_target == "定数":
+                USER_VALUE_CHOICE = ["14.6","14.7","14.8","14.9","15.0"]
+                user_value = st.selectbox("what定数", USER_VALUE_CHOICE)
+            elif user_target == "版本":
+                USER_VALUE_CHOICE = VERSION.copy()
+                user_value = st.selectbox("何版本", USER_VALUE_CHOICE)
+            elif user_target == "系列":
+                USER_VALUE_CHOICE = TAG.copy()
+                user_value = st.selectbox("啥系列", USER_VALUE_CHOICE)
+            elif user_target == "绝赞":
+                user_value = st.slider("绝赞数",min_value=2,max_value=222)
+            elif user_target == "类型":
+                user_value = st.selectbox("什么类型",["STD","DX"])
+            elif user_target == "bpm":
+                user_value = st.slider("bpm",min_value=88,max_value=339)
+            elif user_target == "物量":
+                user_value = st.slider("物量",min_value=655,max_value=2222)
+            elif user_target == "难度":
+                user_value = st.selectbox("问个问题",["BASIC","ADVANCED","EXPERT","MASTER","Re:MASTER"])
+            elif user_target == "tap":
+                user_value = st.slider("tap数",min_value=1590,max_value=377)
+            elif user_target == "hold":
+                user_value = st.slider("hold数",min_value=0,max_value=173)
+            elif user_target == "slide":
+                user_value = st.slider("slide数",min_value=1,max_value=211)
+            elif user_target == "touch":
+                user_value = st.slider("touch数",min_value=0,max_value=302)
+            elif user_target == "日期":
+                user_value = str(st.date_input("追加日期"))
+            else:
+                USER_VALUE_CHOICE = ["卡BUG了"]
+                user_value = st.selectbox("问个问题", USER_VALUE_CHOICE)
+        if st.button("那我问你"):
+            st.session_state.description += ("\n" + random_description(st.session_state.song,USER_TARGET_TRANS[user_target],user_value))
+    if st.session_state.description:
+        st.text(st.session_state.description)
+    else:
+        st.text("(问个问题获取提示)")
+    if st.button("到底是什么"):
+        col111, col222 = st.columns([1,2])
+        with col111:
+            print_cover(st.session_state.song)
+        with col222:
+            print_info(st.session_state.song)
+
+if st.session_state.after_rerun:
+    st.toast(st.session_state.after_rerun)
+    st.session_state.after_rerun = ""
+
+
+def match_song(song_name: str, query: str, threshold: int = 60) -> bool:
+    song = song_name.lower()
+    q = query.lower()
+    if q in song:
+        return True
+    score = fuzz.partial_ratio(q, song)
+    return score >= threshold
+
+col5, col6, coll = st.columns([3,6,1])
 with col5:
     st.title("请您越级")
-with col6:
+with coll:
     st.text("")
     st.text("")
     if st.button("设置"):
         setting()
+with col6:
+    st.image("static\image\icon\\0.png",width=80)
 songs = list(range(0, 88))
 col3, col4 = st.columns(2)
 with col3:
     filter_level = st.multiselect("筛选定数",["14.6","14.7","14.8","14.9","15.0"])
     filter_version = st.multiselect("筛选版本",VERSION)
     filter_charter = st.multiselect("筛选谱师",CHARTER)
-    filter_tag = st.multiselect("筛选标签",TAG)
+    filter_tag = st.multiselect("筛选系列",TAG)
 with col4:
     condition_code = st.text_area("筛选其他", height=236, help="语法为 类别 运算符 数值 例如bpm>=180, released_date<2026-01-01, break==100")
-    filter_name = st.text_input("搜索曲名")
+    filter_name = st.text_input("搜索曲名(谱师)")
 VALID_KEY = ["bpm","released_date","break","tap","hold","slide","touch","total","version","internal_level"]
 if condition_code:
     try:
@@ -376,7 +460,7 @@ songs = [
     and (not filter_version or s in filter_version_list)
     and (not filter_charter or s in filter_charter_list)
     and (not filter_tag or s in filter_tag_list)
-    and (not filter_name or filter_name.lower() in INFO[s]["title"].lower())]
+    and (not filter_name or (match_song(INFO[s]["title"],filter_name,st.session_state.search_index) or match_song(INFO[s]["artist"],filter_name,st.session_state.search_index)))]
 
 col1, col2 = st.columns(2)
 with col1:
