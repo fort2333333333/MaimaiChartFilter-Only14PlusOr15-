@@ -293,7 +293,7 @@ def random_info(songs):
             st.session_state.description = ""
             st.session_state.description_target = ALL_TARGET.copy()
     with col401:
-        st.image("static/image/icon/1.png")
+        st.image(r"static/image/icon/1.png")
     if st.session_state.random_target:
         if st.session_state.description_target == ALL_TARGET:
             st.session_state.description += ("\n" + random_description(st.session_state.song,st.session_state.description_target.pop(random.randint(0,len(st.session_state.description_target) - 1))))
@@ -378,7 +378,7 @@ with coll:
     if st.button("设置"):
         setting()
 with col6:
-    st.image("static\image\icon\\0.png",width=80)
+    st.image(r"static/image/icon/0.png",width=80)
 songs = list(range(0, 88))
 col3, col4 = st.columns(2)
 with col3:
