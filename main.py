@@ -118,11 +118,13 @@ def random_song(songs):
         st.text("瀹炲湪: 缂栦笉涓�  鍘讳簡: 鎵�浠� 鍒板簳鍐�: 浠� 涔堝ソ鍛�:閿� 鏂ゆ嫹: 锟斤拷�� 鎯冲悆: 閿熸枻鎷�")
         st.button("浠ヨ繖鏍")
 
-def crop_cover(index,x,y, cropped_size,g):
+def crop_cover(index,x,y, cropped_size,g,rotate):
     cover = Image.open(full_cover_path(INFO[index]["cover"]))
     cropped = cover.crop((x,y,x+cropped_size,y+cropped_size))
     if g:
         cropped = cropped.convert("L")
+    if rotate != -1:
+        cropped = cropped.rotate(rotate*90,expand=True)
     st.image(cropped,width=300)
 
 ALL_TITLE = ['Xaleid◆scopiX', '系ぎて', 'PANDORA PARADOXXX', '7 Wonders', "World's end BLACKBOX",
@@ -154,7 +156,7 @@ ALL_ARTIST = ['xi', '削除', 't+pazolite', 'sasakure.UK', 'rintaro soma', 'kano
               '新小田夢童 ＆ キラ★ロッソ']
 
 @st.dialog("曲绘猜歌")
-def random_cover(songs,CROP_SIZE,grey):
+def random_cover(songs,CROP_SIZE,grey,rotate):
     col101, col201 = st.columns([9,1])
     with col101:
         if st.button("再猜一首"):
@@ -164,9 +166,12 @@ def random_cover(songs,CROP_SIZE,grey):
                 st.session_state.song = random.randint(0,87)
             st.session_state.x = random.randint(0,190-CROP_SIZE)
             st.session_state.y = random.randint(0,190-CROP_SIZE)
+            st.session_state.r = random.randint(0,3)
     with col201:
         st.image("static/image/icon/1.png")
-    crop_cover(st.session_state.song,st.session_state.x,st.session_state.y,CROP_SIZE,grey)
+    if not rotate:
+        st.session_state.r = -1
+    crop_cover(st.session_state.song,st.session_state.x,st.session_state.y,CROP_SIZE,grey,st.session_state.r)
     coll1, coll2, coll3 = st.columns([4,1,1])
     check_answer = 0
     with coll1:
@@ -198,18 +203,22 @@ if "search_index" not in st.session_state:
     st.session_state.search_index = 80
 if "random_target" not in st.session_state:
     st.session_state.random_target = False
+if "random_rotate" not in st.session_state:
+    st.session_state.random_rotate = False
 
 @st.dialog("设置")
 def setting():
     setting_search_index = st.slider("搜索曲名:模糊搜索严格度(100=无模糊搜索)",min_value=60,max_value=100,value=st.session_state.search_index)
-    setting_image_size = st.slider("曲绘猜歌:曲绘裁剪大小",min_value = 10,max_value = 50,value=st.session_state.image_size)
+    setting_image_size = st.slider("曲绘猜歌:曲绘裁剪大小",min_value = 10,max_value = 100,value=st.session_state.image_size)
     setting_grey = st.toggle("曲绘猜歌:显示黑白曲绘",value=st.session_state.grey)
+    setting_rotate = st.toggle("曲绘猜歌:随机翻转",value=st.session_state.random_rotate)
     setting_random_target = st.toggle("提示猜歌:随机提示",value=st.session_state.random_target)
     if st.button("保存"):
         st.session_state.search_index = setting_search_index
         st.session_state.image_size = setting_image_size
         st.session_state.grey = setting_grey
         st.session_state.random_target = setting_random_target
+        st.session_state.random_rotate = setting_rotate
         st.session_state.after_rerun = "保存成功!"
         st.rerun()
 
@@ -544,7 +553,8 @@ with col11  :
             st.session_state.song = random.randint(0,87)
         st.session_state.x = random.randint(0, 190 - st.session_state.image_size)
         st.session_state.y = random.randint(0, 190 - st.session_state.image_size)
-        random_cover(songs,st.session_state.image_size,st.session_state.grey)
+        st.session_state.r = random.randint(0,3)
+        random_cover(songs,st.session_state.image_size,st.session_state.grey,st.session_state.random_rotate)
 with col12:
     if st.button("提示猜歌"):
         if songs:
