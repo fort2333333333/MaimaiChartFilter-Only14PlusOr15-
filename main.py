@@ -167,6 +167,7 @@ def random_cover(songs,CROP_SIZE,grey,rotate):
             st.session_state.x = random.randint(0,190-CROP_SIZE)
             st.session_state.y = random.randint(0,190-CROP_SIZE)
             st.session_state.r = random.randint(0,3)
+            st.session_state.hint = ""
     with col201:
         st.image("static/image/icon/1.png")
     if not rotate:
@@ -190,6 +191,12 @@ def random_cover(songs,CROP_SIZE,grey,rotate):
             st.success(f"是的")
         elif check_answer == 2:
             st.error(f"不是")
+    if st.button("来个提示"):
+        if st.session_state.hint:
+            st.warning(st.session_state.hint)
+        else:
+            st.session_state.hint = get_random_hint(st.session_state.song)
+            st.warning(st.session_state.hint)
     if st.button("看看答案"):
         print_cover(st.session_state.song)
 
@@ -237,6 +244,28 @@ def random_date():
 
 def get_random_value(key):
     return random.choice(INFO)[key]
+
+def get_random_hint(song):
+    if "完美挑战曲" in INFO[song]["tag"]:
+        target = random.randint(0,2)
+    else:
+        target = random.randint(0,1)
+    if target == 0:
+        if INFO[song]["type"] == "STD":
+            return "这歌是旧框的"
+        elif VERSION.index(INFO[song]["version"]) < VERSION.index("BUDDiES"):
+            return "这歌是DX代的但是在BUDDiES前"
+        else:
+            return "这歌在FESTiVAL PLUS之后"
+    elif target == 1:
+        if INFO[song]["internal_level"] < "14.8":
+            return "这歌定数不到14.8"
+        else:
+            return "这歌定数在14.7之上"
+    elif target == 2:
+        return "这歌是完美挑战曲"
+    return "卡bug了"
+
 
 DESC_DESIGNER = ["Luxizhel","シチミヘルツ","Jack","翠楼屋","サファ太","鳩ホルダー"]
 DESC_LEVEL = ["14.6","14.7","14.8","14.9","15.0"]
@@ -441,12 +470,11 @@ def random_colours(songs):
         if st.button("再来一首"):
             if songs:
                 st.session_state.song = random.choice(songs)
-                st.session_state.xx = [random.randint(0, 189) for j in range(st.session_state.colour_count)]
-                st.session_state.yy = [random.randint(0, 189) for j in range(st.session_state.colour_count)]
             else:
                 st.session_state.song = random.randint(0,87)
-                st.session_state.xx = [random.randint(0, 189) for j in range(st.session_state.colour_count)]
-                st.session_state.yy = [random.randint(0, 189) for j in range(st.session_state.colour_count)]
+            st.session_state.xx = [random.randint(0, 189) for j in range(st.session_state.colour_count)]
+            st.session_state.yy = [random.randint(0, 189) for j in range(st.session_state.colour_count)]
+            st.session_state.hint = ""
     with col998:
         st.image("static/image/icon/1.png")
     colc1, colc2, colc3, colc4, colc5 = st.columns(5)
@@ -485,6 +513,12 @@ def random_colours(songs):
             st.success(f"是的")
         elif check_answer == 2:
             st.error(f"不是")
+    if st.button("来个提示"):
+        if st.session_state.hint:
+            st.warning(st.session_state.hint)
+        else:
+            st.session_state.hint = get_random_hint(st.session_state.song)
+            st.warning(st.session_state.hint)
     if st.button("看看答案"):
         print_cover(st.session_state.song)
 
@@ -612,6 +646,7 @@ with col11:
         st.session_state.x = random.randint(0, 190 - st.session_state.image_size)
         st.session_state.y = random.randint(0, 190 - st.session_state.image_size)
         st.session_state.r = random.randint(0,3)
+        st.session_state.hint = ""
         random_cover(songs,st.session_state.image_size,st.session_state.grey,st.session_state.random_rotate)
 with col12:
     if st.button("颜色猜歌"):
@@ -621,6 +656,7 @@ with col12:
             st.session_state.song = random.randint(0,87)
         st.session_state.xx = [random.randint(0, 189) for i in range(st.session_state.colour_count)]
         st.session_state.yy = [random.randint(0, 189) for i in range(st.session_state.colour_count)]
+        st.session_state.hint = ""
         random_colours(songs)
 with col13:
     if st.button("提示猜歌"):
