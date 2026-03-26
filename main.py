@@ -517,7 +517,7 @@ with col3:
 with col4:
     condition_code = st.text_area("筛选其他", height=236, help="语法为 类别 运算符 数值 例如bpm>=180, released_date<2026-01-01, break==100")
     filter_name = st.text_input("搜索曲名(谱师)")
-VALID_KEY = ["bpm","released_date","break","tap","hold","slide","touch","total","version","internal_level"]
+VALID_KEY = ["bpm","released_date","break","tap","hold","slide","touch","total","version","internal_level","type"]
 if condition_code:
     try:
         for index, line in enumerate(condition_code.split("\n")):
