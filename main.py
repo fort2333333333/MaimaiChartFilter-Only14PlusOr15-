@@ -118,7 +118,7 @@ def random_song(songs):
         st.text("瀹炲湪: 缂栦笉涓�  鍘讳簡: 鎵�浠� 鍒板簳鍐�: 浠� 涔堝ソ鍛�:閿� 鏂ゆ嫹: 锟斤拷�� 鎯冲悆: 閿熸枻鎷�")
         st.button("浠ヨ繖鏍")
 
-def crop_cover(index,x,y, cropped_size,g,rotate):
+def crop_cover(index,x,y, cropped_size,g=False,rotate=False):
     cover = Image.open(full_cover_path(INFO[index]["cover"]))
     cropped = cover.crop((x,y,x+cropped_size,y+cropped_size))
     if g:
@@ -179,7 +179,7 @@ def random_cover(songs,CROP_SIZE,grey,rotate):
         st.text("")
     with coll2:
         st.text("")
-        if st.button("提交"):
+        if st.button("提交答案"):
             if guess_title == INFO[st.session_state.song]["title"]:
                 check_answer = 1
             else:
@@ -205,13 +205,16 @@ if "random_target" not in st.session_state:
     st.session_state.random_target = False
 if "random_rotate" not in st.session_state:
     st.session_state.random_rotate = False
+if "colour_count" not in st.session_state:
+    st.session_state.colour_count = 10
 
 @st.dialog("设置")
 def setting():
     setting_search_index = st.slider("搜索曲名:模糊搜索严格度(100=无模糊搜索)",min_value=60,max_value=100,value=st.session_state.search_index)
-    setting_image_size = st.slider("曲绘猜歌:曲绘裁剪大小",min_value = 10,max_value = 100,value=st.session_state.image_size)
+    setting_image_size = st.slider("曲绘猜歌:曲绘裁剪大小",min_value = 1,max_value = 100,value=st.session_state.image_size)
     setting_grey = st.toggle("曲绘猜歌:显示黑白曲绘",value=st.session_state.grey)
     setting_rotate = st.toggle("曲绘猜歌:随机翻转",value=st.session_state.random_rotate)
+    setting_colour = st.slider("颜色猜歌:颜色数量",min_value=1,max_value=20,value=st.session_state.colour_count)
     setting_random_target = st.toggle("提示猜歌:随机提示",value=st.session_state.random_target)
     if st.button("保存"):
         st.session_state.search_index = setting_search_index
@@ -219,6 +222,7 @@ def setting():
         st.session_state.grey = setting_grey
         st.session_state.random_target = setting_random_target
         st.session_state.random_rotate = setting_rotate
+        st.session_state.colour_count = setting_colour
         st.session_state.after_rerun = "保存成功!"
         st.rerun()
 
@@ -430,6 +434,60 @@ if st.session_state.after_rerun:
     st.toast(st.session_state.after_rerun)
     st.session_state.after_rerun = ""
 
+@st.dialog("颜色猜歌")
+def random_colours(songs):
+    col999, col998 = st.columns([9,1])
+    with col999:
+        if st.button("再来一首"):
+            if songs:
+                st.session_state.song = random.choice(songs)
+                st.session_state.xx = [random.randint(0, 189) for j in range(st.session_state.colour_count)]
+                st.session_state.yy = [random.randint(0, 189) for j in range(st.session_state.colour_count)]
+            else:
+                st.session_state.song = random.randint(0,87)
+                st.session_state.xx = [random.randint(0, 189) for j in range(st.session_state.colour_count)]
+                st.session_state.yy = [random.randint(0, 189) for j in range(st.session_state.colour_count)]
+    with col998:
+        st.image("static/image/icon/1.png")
+    colc1, colc2, colc3, colc4, colc5 = st.columns(5)
+    for j in range(st.session_state.colour_count):
+        if j%5 == 0:
+            with colc1:
+                crop_cover(st.session_state.song,st.session_state.xx[j],st.session_state.yy[j],1)
+        if j%5 == 1:
+            with colc2:
+                crop_cover(st.session_state.song,st.session_state.xx[j],st.session_state.yy[j],1)
+        if j%5 == 2:
+            with colc3:
+                crop_cover(st.session_state.song,st.session_state.xx[j],st.session_state.yy[j],1)
+        if j%5 == 3:
+            with colc4:
+                crop_cover(st.session_state.song,st.session_state.xx[j],st.session_state.yy[j],1)
+        if j%5 == 4:
+            with colc5:
+                crop_cover(st.session_state.song,st.session_state.xx[j],st.session_state.yy[j],1)
+
+    colll1, colll2, colll3 = st.columns([4, 1, 1])
+    check_answer = 0
+    with colll1:
+        guess_title = st.selectbox("检查答案", ALL_TITLE)
+        st.text("")
+    with colll2:
+        st.text("")
+        if st.button("提交答案"):
+            if guess_title == INFO[st.session_state.song]["title"]:
+                check_answer = 1
+            else:
+                check_answer = 2
+    with colll3:
+        st.text("")
+        if check_answer == 1:
+            st.success(f"是的")
+        elif check_answer == 2:
+            st.error(f"不是")
+    if st.button("看看答案"):
+        print_cover(st.session_state.song)
+
 
 def match_song(song_name: str, query: str, threshold: int = 60) -> bool:
     song = song_name.lower()
@@ -545,7 +603,7 @@ col10, col11, col12, col13 = st.columns(4)
 with col10:
     if st.button("随机抽取"):
         random_song(songs)
-with col11  :
+with col11:
     if st.button("曲绘猜歌"):
         if songs:
             st.session_state.song = random.choice(songs)
@@ -556,6 +614,15 @@ with col11  :
         st.session_state.r = random.randint(0,3)
         random_cover(songs,st.session_state.image_size,st.session_state.grey,st.session_state.random_rotate)
 with col12:
+    if st.button("颜色猜歌"):
+        if songs:
+            st.session_state.song = random.choice(songs)
+        else:
+            st.session_state.song = random.randint(0,87)
+        st.session_state.xx = [random.randint(0, 189) for i in range(st.session_state.colour_count)]
+        st.session_state.yy = [random.randint(0, 189) for i in range(st.session_state.colour_count)]
+        random_colours(songs)
+with col13:
     if st.button("提示猜歌"):
         if songs:
             st.session_state.song = random.choice(songs)
