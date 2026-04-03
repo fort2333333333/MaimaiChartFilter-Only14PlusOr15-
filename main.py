@@ -1,6 +1,7 @@
 import json
 import random
 import streamlit as st
+import streamlit.components.v1 as components
 from PIL import Image
 from datetime import datetime, timedelta
 from rapidfuzz import fuzz
@@ -94,6 +95,10 @@ def print_info(index):
     st.text(f"日期: {INFO[index]["released_date"]} ({INFO[index]["version"]})")
     st.text(f"tap: {INFO[index]["tap"]}  hold: {INFO[index]["hold"]}  slide: {INFO[index]["slide"]}  touch: {INFO[index]["touch"]}  break: {INFO[index]["break"]}  total: {INFO[index]["total"]}")
 
+def look_chart(video_link):
+    st.session_state.video_link = video_link
+    st.switch_page("pages/video.py")
+
 def print_all(index_list):
     for index in index_list:
         col1, col2 = st.columns([1,2])
@@ -101,6 +106,11 @@ def print_all(index_list):
             print_cover(index)
         with col2:
             print_info(index)
+            if st.button("谱面确认",key=index+1000):
+                if "video" in INFO[index]:
+                    look_chart(INFO[index]["video"])
+                else:
+                    st.error("没找到喵")
 
 @st.dialog("随机歌曲")
 def random_song(songs):
@@ -188,9 +198,9 @@ def random_cover(songs,CROP_SIZE,grey,rotate):
     with coll3:
         st.text("")
         if check_answer == 1:
-            st.success(f"是的")
+            st.success(f"对喵")
         elif check_answer == 2:
-            st.error(f"不是")
+            st.error(f"错喵")
     if st.button("来个提示"):
         if st.session_state.hint:
             st.warning(st.session_state.hint)
@@ -256,7 +266,7 @@ def get_random_hint(song):
         elif VERSION.index(INFO[song]["version"]) < VERSION.index("BUDDiES"):
             return "这歌是DX代的但是在BUDDiES前"
         else:
-            return "这歌在FESTiVAL PLUS之后"
+            return "这歌在FESTiVAL  PLUS之后"
     elif target == 1:
         if INFO[song]["internal_level"] < "14.8":
             return "这歌定数不到14.8"
@@ -510,9 +520,9 @@ def random_colours(songs):
     with colll3:
         st.text("")
         if check_answer == 1:
-            st.success(f"是的")
+            st.success(f"对喵")
         elif check_answer == 2:
-            st.error(f"不是")
+            st.error(f"错喵")
     if st.button("来个提示"):
         if st.session_state.hint:
             st.warning(st.session_state.hint)
@@ -530,6 +540,12 @@ def match_song(song_name: str, query: str, threshold: int = 60) -> bool:
         return True
     score = fuzz.partial_ratio(q, song)
     return score >= threshold
+
+#temp = []
+#for s in INFO:
+#    temp.append(f"{s["title"]} {s["difficulty"]}")
+#st.text(temp)
+
 
 col5, col6, coll = st.columns([3,6,1])
 with col5:

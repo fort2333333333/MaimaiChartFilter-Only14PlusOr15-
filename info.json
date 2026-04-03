@@ -19,7 +19,8 @@
     "total": "2222",
     "cover": "1656.png",
     "designers": ["Xaleid◆scopiX"],
-    "tag": ["KaleidScope"]
+    "tag": ["KaleidScope"],
+    "video": "https://www.bilibili.com/video/BV1BXx7zcEdn"
   },
   {
     "No.": "1421",
@@ -41,7 +42,8 @@
     "total": "1400",
     "cover": "1421.png",
     "designers": ["BEYOND THE MEMORIES"],
-    "tag": ["KOP决赛曲"]
+    "tag": ["KOP决赛曲"],
+    "video": "https://www.bilibili.com/video/BV1HNHszkEQ1"
   },
   {
     "No.": "840",
@@ -63,7 +65,8 @@
     "total": "1342",
     "cover": "840.png",
     "designers": ["PANDORA PARADOXXX"],
-    "tag": ["PANDORA BOXXX"]
+    "tag": ["PANDORA BOXXX"],
+    "video": "https://www.bilibili.com/video/BV1vupPzGEsT"
   },
   {
     "No.": "1757",
@@ -85,7 +88,8 @@
     "total": "1285",
     "cover": "1757.png",
     "designers": ["シチミヘルツ"],
-    "tag": ["KOP决赛曲","Legend曲"]
+    "tag": ["KOP决赛曲","Legend曲"],
+    "video": "https://www.bilibili.com/video/BV1TrP6zHE5h"
   },
   {
     "No.": "1656",
@@ -107,8 +111,9 @@
     "total": "2181",
     "cover": "1656.png",
     "designers": ["KALEIDXSCOPE"],
-    "tag": ["KaleidScope"]
-  },
+    "tag": ["KaleidScope"],
+    "video": "https://www.bilibili.com/video/BV1yrx7zBELR"
+},
   {
     "No.": "1653",
     "title": "World's end BLACKBOX",
@@ -129,8 +134,9 @@
     "total": "1322",
     "cover": "1653.png",
     "designers": ["鳩ホルダー"],
-    "tag": ["KaleidScope"]
-  },
+    "tag": ["KaleidScope"],
+    "video": "https://www.bilibili.com/video/BV1aKxEzHEhm"
+},
   {
     "No.": "1584",
     "title": "宙天",
@@ -151,8 +157,9 @@
     "total": "1058",
     "cover": "1584.png",
     "designers": ["Luxizhel","サファ太"],
-    "tag": ["KOP决赛曲","KaleidScope"]
-  },
+    "tag": ["KOP决赛曲","KaleidScope"],
+    "video": "https://www.bilibili.com/video/BV1oExJzwEYC"
+},
   {
     "No.": "1388",
     "title": "raputa",
@@ -173,8 +180,9 @@
     "total": "1316",
     "cover": "1388.png",
     "designers": ["サファ太","翠楼屋"],
-    "tag": ["完美挑战曲","project_raputa"]
-  },
+    "tag": ["完美挑战曲","project_raputa"],
+    "video": "https://www.bilibili.com/video/BV1snHxznEju"
+},
   {
     "No.": "1367",
     "title": "Latent Kingdom",
@@ -195,7 +203,8 @@
     "total": "1371",
     "cover": "1367.png",
     "designers": ["サファ太","シチミヘルツ"],
-    "tag": ["Legend曲"]
+    "tag": ["Legend曲"],
+    "video": "https://www.bilibili.com/video/BV1kzHpz6Ef4"
   },
   {
     "No.": "1190",
@@ -217,7 +226,8 @@
     "total": "1234",
     "cover": "1190.png",
     "designers": ["翠楼屋"],
-    "tag": ["完美挑战曲"]
+    "tag": ["完美挑战曲"],
+    "video": "https://www.bilibili.com/video/BV14c411A76a"
   },
   {
     "No.": "1143",
@@ -239,7 +249,8 @@
     "total": "973",
     "cover": "1143.png",
     "designers": ["シチミヘルツ"],
-    "tag": ["Legend曲"]
+    "tag": ["Legend曲"],
+    "video": "https://www.bilibili.com/video/BV12V4y167JT"
   },
   {
     "No.": "1127",
@@ -261,7 +272,8 @@
     "total": "1038",
     "cover": "1127.png",
     "designers": ["シチミヘルツ","隅田川星人"],
-    "tag": ["完美挑战曲"]
+    "tag": ["完美挑战曲"],
+    "video": "https://www.bilibili.com/video/BV1y84y1s7Kr"
   },
   {
     "No.": "840",
@@ -283,7 +295,8 @@
     "total": "1309",
     "cover": "840.png",
     "designers": ["PANDORA BOXXX"],
-    "tag": ["PANDORA BOXXX"]
+    "tag": ["PANDORA BOXXX"],
+    "video": "https://www.bilibili.com/video/BV1xbpPzbEbw"
   },
   {
     "No.": "839",
@@ -305,8 +318,9 @@
     "total": "1057",
     "cover": "839.png",
     "designers": ["サファ太"],
-    "tag": ["PANDORA BOXXX"]
-  },
+    "tag": ["PANDORA BOXXX"],
+    "video": "https://www.bilibili.com/video/BV1Lu41117qu"
+},
   {
     "No.": "835",
     "title": "Schwarzschild",
@@ -327,8 +341,9 @@
     "total": "875",
     "cover": "835.png",
     "designers": ["Jack","はっぴー"],
-    "tag": ["PANDORA BOXXX"]
-  },
+    "tag": ["PANDORA BOXXX"],
+    "video": "https://www.bilibili.com/video/BV1uS4y1o77P"
+},
   {
     "No.": "834",
     "title": "QZKago Requiem",
@@ -349,8 +364,9 @@
     "total": "1181",
     "cover": "834.png",
     "designers": ["Garakuta Scramble!"],
-    "tag": ["PANDORA BOXXX"]
-  },
+    "tag": ["PANDORA BOXXX"],
+    "video": "https://www.bilibili.com/video/BV1Eu411X78T"
+},
   {
     "No.": "1713",
     "title": "False Amber (from the Black Bazaar, Or by A Kervan Trader from the Lands Afar, Or Buried Beneath the Shifting Sands That Lead Everywhere but Nowhere)",
@@ -371,8 +387,9 @@
     "total": "1192",
     "cover": "1713.png",
     "designers": ["サファ太"],
-    "tag": ["KOP预选追加曲"]
-  },
+    "tag": ["KOP预选追加曲"],
+    "video": "https://www.bilibili.com/video/BV1KPy8BMEQY"
+},
   {
     "No.": "1708",
     "title": "Customized Justice",
@@ -393,8 +410,9 @@
     "total": "1076",
     "cover": "1708.png",
     "designers": ["柠檬","サファ太"],
-    "tag": ["Legend曲"]
-  },
+    "tag": ["Legend曲"],
+    "video": "https://www.bilibili.com/video/BV1qtWezvEUg"
+},
   {
     "No.": "1629",
     "title": "FLΛME/FRΦST",
@@ -415,8 +433,9 @@
     "total": "1046",
     "cover": "1629.png",
     "designers": ["サファ太","ロシェ@ペンギン"],
-    "tag": ["KaleidScope"]
-  },
+    "tag": ["KaleidScope"],
+    "video": "https://www.bilibili.com/video/BV15kxEzoEh8"
+},
   {
     "No.": "1539",
     "title": "Divide et impera!",
@@ -437,8 +456,9 @@
     "total": "1225",
     "cover": "1539.png",
     "designers": ["鳩ホルダー"],
-    "tag": ["KOP预选追加曲"]
-  },
+    "tag": ["KOP预选追加曲"],
+    "video": "https://www.bilibili.com/video/BV1HWxjzwEY3"
+},
   {
     "No.": "1538",
     "title": "氷滅の135小節",
@@ -459,8 +479,9 @@
     "total": "1125",
     "cover": "1538.png",
     "designers": ["シチミヘルツ","Luxizhel"],
-    "tag": ["KaleidScope"]
-  },
+    "tag": ["KaleidScope"],
+    "video": "https://www.bilibili.com/video/BV1rWxjzwES9"
+},
   {
     "No.": "1498",
     "title": "ℝ∈Χ LUNATiCA",
@@ -481,8 +502,9 @@
     "total": "1103",
     "cover": "1498.png",
     "designers": ["Luxizhel"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": "https://www.bilibili.com/video/BV1rWxjzwES9"
+},
   {
     "No.": "1412",
     "title": "Straight into the lights",
@@ -503,8 +525,9 @@
     "total": "1111",
     "cover": "1412.png",
     "designers": ["Jack"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": "https://www.bilibili.com/video/BV1n8HxzLE8q"
+},
   {
     "No.": "1289",
     "title": "VeRForTe αRtE:VEiN",
@@ -525,8 +548,9 @@
     "total": "1064",
     "cover": "1289.png",
     "designers": ["翠楼屋"],
-    "tag": ["Legend曲"]
-  },
+    "tag": ["Legend曲"],
+    "video": ""
+},
   {
     "No.": "1183",
     "title": "WiPE OUT MEMORIES",
@@ -547,8 +571,9 @@
     "total": "1105",
     "cover": "1183.png",
     "designers": ["maimai Fumen All-Stars"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": ""
+},
   {
     "No.": "1176",
     "title": "チューリングの跡",
@@ -569,8 +594,9 @@
     "total": "956",
     "cover": "1176.png",
     "designers": ["譜面-100号"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "1012",
     "title": "Heavenly Blast",
@@ -591,8 +617,9 @@
     "total": "1169",
     "cover": "1012.png",
     "designers": ["隅田川星人"],
-    "tag": ["PANDORA BOXXX","Legend曲"]
-  },
+    "tag": ["PANDORA BOXXX","Legend曲"],
+    "video": ""
+},
   {
     "No.": "943",
     "title": "封焔の135秒",
@@ -613,8 +640,9 @@
     "total": "1092",
     "cover": "943.png",
     "designers": ["小鳥遊さん","シチミヘルツ"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "839",
     "title": "the EmpErroR",
@@ -635,8 +663,9 @@
     "total": "1057",
     "cover": "839.png",
     "designers": ["小鳥遊さん"],
-    "tag": ["PANDORA BOXXX"]
-  },
+    "tag": ["PANDORA BOXXX"],
+    "video": ""
+},
   {
     "No.": "838",
     "title": "雷切-RAIKIRI-",
@@ -657,8 +686,9 @@
     "total": "1167",
     "cover": "838.png",
     "designers": ["小鳥遊さん"],
-    "tag": ["PANDORA BOXXX"]
-  },
+    "tag": ["PANDORA BOXXX"],
+    "video": ""
+},
   {
     "No.": "836",
     "title": "Alea jacta est!",
@@ -679,8 +709,9 @@
     "total": "1137",
     "cover": "836.png",
     "designers": ["小鳥遊さん"],
-    "tag": ["PANDORA BOXXX"]
-  },
+    "tag": ["PANDORA BOXXX"],
+    "video": ""
+},
   {
     "No.": "834",
     "title": "QZKago Requiem",
@@ -701,8 +732,9 @@
     "total": "1105",
     "cover": "834.png",
     "designers": ["チャン@DP皆伝"],
-    "tag": ["PANDORA BOXXX"]
-  },
+    "tag": ["PANDORA BOXXX"],
+    "video": ""
+},
   {
     "No.": "784",
     "title": "怒槌",
@@ -723,8 +755,9 @@
     "total": "1188",
     "cover": "784.png",
     "designers": ["譜面ボーイズからの挑戦状"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "783",
     "title": "SILENT BLUE",
@@ -745,8 +778,9 @@
     "total": "1086",
     "cover": "783.png",
     "designers": ["サファ太"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "755",
     "title": "larva",
@@ -767,8 +801,9 @@
     "total": "1173",
     "cover": "755.png",
     "designers": ["Jack"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "711",
     "title": "Excalibur ～Revived resolution～",
@@ -789,8 +824,9 @@
     "total": "974",
     "cover": "711.png",
     "designers": ["小鳥遊さん"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "616",
     "title": "Our Wrenally",
@@ -811,8 +847,9 @@
     "total": "999",
     "cover": "616.png",
     "designers": ["はっぴー"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "566",
     "title": "Glorious Crown",
@@ -833,8 +870,9 @@
     "total": "1150",
     "cover": "566.png",
     "designers": ["合作だよ"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "403",
     "title": "Garakuta Doll Play",
@@ -855,8 +893,9 @@
     "total": "1010",
     "cover": "403.png",
     "designers": ["小鳥遊さん"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "273",
     "title": "In Chaos",
@@ -877,8 +916,9 @@
     "total": "880",
     "cover": "273.png",
     "designers": ["チャン@DP皆伝"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "268",
     "title": "Break The Speakers",
@@ -899,8 +939,9 @@
     "total": "1096",
     "cover": "268.png",
     "designers": ["Luxizhel"],
-    "tag": ["KOP决赛曲","Legend曲"]
-  },
+    "tag": ["KOP决赛曲","Legend曲"],
+    "video": ""
+},
   {
     "No.": "1752",
     "title": "Sky Trails",
@@ -921,8 +962,9 @@
     "total": "1052",
     "cover": "1752.png",
     "designers": ["Luxizhel","はっぴー","カマボコ君"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": ""
+},
   {
     "No.": "1613",
     "title": "ATLAS RUSH",
@@ -943,8 +985,9 @@
     "total": "1045",
     "cover": "1613.png",
     "designers": ["Luxizhel"],
-    "tag": ["Legend曲"]
-  },
+    "tag": ["Legend曲"],
+    "video": ""
+},
   {
     "No.": "1477",
     "title": "Re:Unknown X",
@@ -965,8 +1008,9 @@
     "total": "1189",
     "cover": "1477.png",
     "designers": ["アミノハバキリ"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "1421",
     "title": "系ぎて",
@@ -987,8 +1031,9 @@
     "total": "1200",
     "cover": "1421.png",
     "designers": ["maimai TEAM DX"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "1387",
     "title": "Apollo",
@@ -1009,8 +1054,9 @@
     "total": "1211",
     "cover": "1387.png",
     "designers": ["ロシェ","あまくちジンジャ一"],
-    "tag": ["完美挑战曲","project_raputa"]
-  },
+    "tag": ["完美挑战曲","project_raputa"],
+    "video": ""
+},
   {
     "No.": "1375",
     "title": "KHYMΞXΛ",
@@ -1031,8 +1077,9 @@
     "total": "981",
     "cover": "1375.png",
     "designers": ["鳩ホルダー","Luxizhel"],
-    "tag": ["KOP预选追加曲"]
-  },
+    "tag": ["KOP预选追加曲"],
+    "video": ""
+},
   {
     "No.": "1338",
     "title": "LAMIA",
@@ -1053,8 +1100,9 @@
     "total": "999",
     "cover": "1338.png",
     "designers": ["譜面ボーイズからの挑戦状"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "1256",
     "title": "康莊大道",
@@ -1075,8 +1123,9 @@
     "total": "1129",
     "cover": "1256.png",
     "designers": ["サファ太","カマボコ君"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": ""
+},
   {
     "No.": "1235",
     "title": "VIIIbit Explorer",
@@ -1097,8 +1146,9 @@
     "total": "999",
     "cover": "1235.png",
     "designers": ["サファ太"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": ""
+},
   {
     "No.": "1188",
     "title": "Metamorphosism",
@@ -1119,8 +1169,9 @@
     "total": "954",
     "cover": "1188.png",
     "designers": ["はっぴー"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "1133",
     "title": "GIGANTØMAKHIA",
@@ -1141,8 +1192,9 @@
     "total": "1149",
     "cover": "1133.png",
     "designers": ["翠楼屋"],
-    "tag": ["KOP决赛曲"]
-  },
+    "tag": ["KOP决赛曲"],
+    "video": ""
+},
   {
     "No.": "1087",
     "title": "Lia=Fail",
@@ -1163,8 +1215,9 @@
     "total": "1016",
     "cover": "1087.png",
     "designers": ["小鳥遊さん","サファ太"],
-    "tag": ["PANDORA BOXXX","Legend曲"]
-  },
+    "tag": ["PANDORA BOXXX","Legend曲"],
+    "video": ""
+},
   {
     "No.": "1005",
     "title": "Regulus",
@@ -1185,8 +1238,9 @@
     "total": "999",
     "cover": "1005.png",
     "designers": ["シチミヘルツ"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": ""
+},
   {
     "No.": "914",
     "title": "Valsqotch",
@@ -1207,8 +1261,9 @@
     "total": "1194",
     "cover": "914.png",
     "designers": ["Jack","小鳥遊さん"],
-    "tag": ["KOP决赛曲"]
-  },
+    "tag": ["KOP决赛曲"],
+    "video": ""
+},
   {
     "No.": "890",
     "title": "TEmPTaTiON",
@@ -1229,8 +1284,9 @@
     "total": "1115",
     "cover": "890.png",
     "designers": ["小鳥遊さん"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "833",
     "title": "End Time",
@@ -1251,8 +1307,9 @@
     "total": "949",
     "cover": "833.png",
     "designers": ["チャン@DP皆伝"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "600",
     "title": "AMAZING MIGHTYYYY!!!!",
@@ -1273,8 +1330,9 @@
     "total": "1126",
     "cover": "600.png",
     "designers": ["合作だよ"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "515",
     "title": "ガラテアの螺旋",
@@ -1295,8 +1353,9 @@
     "total": "899",
     "cover": "515.png",
     "designers": ["サファ太"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "484",
     "title": "VERTeX",
@@ -1317,8 +1376,9 @@
     "total": "888",
     "cover": "484.png",
     "designers": ["Jack"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "1748",
     "title": "零號車輛",
@@ -1339,8 +1399,9 @@
     "total": "1143",
     "cover": "1748.png",
     "designers": ["はっぴー"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "1725",
     "title": "ラストピースに祝福と栄光を",
@@ -1361,8 +1422,9 @@
     "total": "1399",
     "cover": "1725.png",
     "designers": ["せめんともり"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "1718",
     "title": "Get U ♭ack",
@@ -1383,8 +1445,9 @@
     "total": "999",
     "cover": "1718.png",
     "designers": ["Luxizhel"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": ""
+},
   {
     "No.": "1607",
     "title": "Åntinomiε",
@@ -1405,8 +1468,9 @@
     "total": "1039",
     "cover": "1607.png",
     "designers": ["サファ太","ぴちネコ"],
-    "tag": ["KaleidScope"]
-  },
+    "tag": ["KaleidScope"],
+    "video": ""
+},
   {
     "No.": "1583",
     "title": "雨露霜雪",
@@ -1427,8 +1491,9 @@
     "total": "1211",
     "cover": "1583.png",
     "designers": ["サファ太","Luxizhel"],
-    "tag": ["完美挑战曲","KOP决赛曲"]
-  },
+    "tag": ["完美挑战曲","KOP决赛曲"],
+    "video": ""
+},
   {
     "No.": "1531",
     "title": "Cryptarithm",
@@ -1449,8 +1514,9 @@
     "total": "995",
     "cover": "1531.png",
     "designers": ["サファ太","Luxizhel"],
-    "tag": ["Legend曲"]
-  },
+    "tag": ["Legend曲"],
+    "video": ""
+},
   {
     "No.": "1456",
     "title": "IF:U",
@@ -1471,8 +1537,9 @@
     "total": "949",
     "cover": "1456.png",
     "designers": ["鳩ホルダー"],
-    "tag": ["Legend曲"]
-  },
+    "tag": ["Legend曲"],
+    "video": ""
+},
   {
     "No.": "1431",
     "title": "Λzure Vixen",
@@ -1493,8 +1560,9 @@
     "total": "1289",
     "cover": "1431.png",
     "designers": ["Luxizhel"],
-    "tag": ["KOP决赛曲"]
-  },
+    "tag": ["KOP决赛曲"],
+    "video": ""
+},
   {
     "No.": "1413",
     "title": "渦状銀河のシンフォニエッタ",
@@ -1515,8 +1583,9 @@
     "total": "1214",
     "cover": "1413.png",
     "designers": ["ぴちネコ"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "1384",
     "title": "神威",
@@ -1537,8 +1606,9 @@
     "total": "1263",
     "cover": "1384.png",
     "designers": ["ロシェ@ペンギン"],
-    "tag": ["完美挑战曲","project_raputa"]
-  },
+    "tag": ["完美挑战曲","project_raputa"],
+    "video": ""
+},
   {
     "No.": "1330",
     "title": "超熊猫的周遊記（ワンダーパンダートラベラー）",
@@ -1559,8 +1629,9 @@
     "total": "1041",
     "cover": "1330.png",
     "designers": ["Jack"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": ""
+},
   {
     "No.": "1320",
     "title": "VERTeX (rintaro soma deconstructed remix)",
@@ -1581,8 +1652,9 @@
     "total": "936",
     "cover": "1320.png",
     "designers": ["rintaro soma"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": ""
+},
   {
     "No.": "1264",
     "title": "ViRTUS",
@@ -1603,8 +1675,9 @@
     "total": "1063",
     "cover": "1264.png",
     "designers": ["Jack","小鳥遊さん","サファ太"],
-    "tag": ["KOP决赛曲"]
-  },
+    "tag": ["KOP决赛曲"],
+    "video": ""
+},
   {
     "No.": "1216",
     "title": "mystique as iris",
@@ -1625,8 +1698,9 @@
     "total": "1167",
     "cover": "1216.png",
     "designers": ["小鳥遊さん","Redarrow"],
-    "tag": ["Legend曲"]
-  },
+    "tag": ["Legend曲"],
+    "video": ""
+},
   {
     "No.": "1109",
     "title": "Yorugao",
@@ -1647,8 +1721,9 @@
     "total": "954",
     "cover": "1109.png",
     "designers": ["Jack","Licorice Gunjyo"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": ""
+},
   {
     "No.": "1097",
     "title": "BLACK SWAN",
@@ -1669,8 +1744,9 @@
     "total": "966",
     "cover": "1097.png",
     "designers": ["隅田川星人"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": ""
+},
   {
     "No.": "1076",
     "title": "脳天直撃",
@@ -1691,8 +1767,9 @@
     "total": "1296",
     "cover": "1076.png",
     "designers": ["小鳥遊さん","華火職人"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "1056",
     "title": "AMABIE",
@@ -1713,8 +1790,9 @@
     "total": "932",
     "cover": "1056.png",
     "designers": ["はっぴー"],
-    "tag": ["完美挑战曲"]
-  },
+    "tag": ["完美挑战曲"],
+    "video": ""
+},
   {
     "No.": "1011",
     "title": "BREaK! BREaK! BREaK!",
@@ -1735,8 +1813,9 @@
     "total": "1106",
     "cover": "1011.png",
     "designers": ["サファ太"],
-    "tag": ["KOP决赛曲"]
-  },
+    "tag": ["KOP决赛曲"],
+    "video": ""
+},
   {
     "No.": "880",
     "title": "Titania",
@@ -1757,8 +1836,9 @@
     "total": "1031",
     "cover": "880.png",
     "designers": ["某S氏"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "838",
     "title": "雷切-RAIKIRI-",
@@ -1779,8 +1859,9 @@
     "total": "1190",
     "cover": "838.png",
     "designers": ["某S氏"],
-    "tag": ["PANDORA BOXXX"]
-  },
+    "tag": ["PANDORA BOXXX"],
+    "video": ""
+},
   {
     "No.": "795",
     "title": "TiamaT:F minor",
@@ -1801,8 +1882,9 @@
     "total": "1122",
     "cover": "795.png",
     "designers": ["合作だよ"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "717",
     "title": "Credits",
@@ -1823,8 +1905,9 @@
     "total": "733",
     "cover": "717.png",
     "designers": ["譜面-100号"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "601",
     "title": "Prophesy One",
@@ -1845,8 +1928,9 @@
     "total": "1068",
     "cover": "601.png",
     "designers": ["Revo@LC"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "515",
     "title": "ガラテアの螺旋",
@@ -1867,8 +1951,9 @@
     "total": "859",
     "cover": "515.png",
     "designers": ["チャン@DP皆伝"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "345",
     "title": "Fragrance",
@@ -1889,8 +1974,9 @@
     "total": "655",
     "cover": "345.png",
     "designers": ["玉子豆腐"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "298",
     "title": "ジングルベル",
@@ -1911,8 +1997,9 @@
     "total": "929",
     "cover": "298.png",
     "designers": ["チャン@DP皆伝"],
-    "tag": []
-  },
+    "tag": [],
+    "video": ""
+},
   {
     "No.": "286",
     "title": "源平大戦絵巻テーマソング",
