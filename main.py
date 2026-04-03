@@ -97,7 +97,7 @@ def print_info(index):
 
 def look_chart(video_link):
     st.session_state.video_link = video_link
-    st.switch_page("pages/video.py")
+    st.switch_page("video.py")
 
 def print_all(index_list):
     for index in index_list:
