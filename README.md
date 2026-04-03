@@ -1,2 +1,2 @@
-# MaimaiChartFilter-Only14PlusOr15-
+# MaimaiChartFilterOnly14PlusOr15
 包含舞萌DX所有14+和15的信息和一些猜歌游戏
