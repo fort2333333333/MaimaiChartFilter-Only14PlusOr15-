@@ -30,11 +30,11 @@ ALL_TITLE = ['Xaleid◆scopiX Re:MASTER', '系ぎて Re:MASTER', 'PANDORA PARADO
              'TiamaT:F minor MASTER', 'Credits MASTER', 'Prophesy One MASTER', 'ガラテアの螺旋 MASTER', 'Fragrance Re:MASTER',
              'ジングルベル MASTER', '源平大戦絵巻テーマソング Re:MASTER']
 
-st.title("谱面播放室")
+st.title("谱面播放室📽")
 INFO = load_data()
-choose_chart = st.selectbox("选择谱面",ALL_TITLE)
-choose_chart = ALL_TITLE.index(choose_chart)
-if st.button("播放"):
+choose_chart = st.selectbox("换一个谱面",ALL_TITLE)
+if st.button(f"切换"):
+    choose_chart = ALL_TITLE.index(choose_chart)
     if "video" in INFO[choose_chart]:
         st.session_state.video_link = INFO[choose_chart]["video"]
 if "video_link" not in st.session_state:

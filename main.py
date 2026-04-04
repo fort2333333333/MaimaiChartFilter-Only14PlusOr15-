@@ -126,17 +126,11 @@ def print_all(index_list):
 def random_song(songs):
     if songs:
         song = random.choice(songs)
-        print_cover(song)
-        print_info(song)
-        st.button("再越一首")
     else:
-        st.image("static/image/cover/-1.jpg")
-        st.text("鍠滄�㈣糠浣犱笘鐣� 浣犳槸 杩欎釜 lv.浠�涔� (鎯冲共.鍟�)")
-        st.text("鏇插笀: 杩欐槸璋� 脳 鏄�涓�浜虹墿")
-        st.text("璋卞笀: 涓嶆槸涔嬩腑 濋笩: 鍍忔繃绋")
-        st.text("鏃ユ湡: 鍝堝搱-涓栫晫-浣犲ソ (鍢诲樆)")
-        st.text("瀹炲湪: 缂栦笉涓�  鍘讳簡: 鎵�浠� 鍒板簳鍐�: 浠� 涔堝ソ鍛�:閿� 鏂ゆ嫹: 锟斤拷�� 鎯冲悆: 閿熸枻鎷�")
-        st.button("浠ヨ繖鏍")
+        song = random.randint(0,87)
+    print_cover(song)
+    print_info(song)
+    st.button("再越一首")
 
 def crop_cover(index,x,y, cropped_size,g=False,rotate=False):
     cover = Image.open(full_cover_path(INFO[index]["cover"]))
@@ -693,7 +687,11 @@ with col13:
         st.session_state.description_target = ALL_TARGET.copy()
         random_info(songs)
 try:
-    st.caption(f"找到了:green[{len(songs)}]个谱面")
+    st.divider()
+    if songs:
+        st.caption(f"找到了:green[{len(songs)}]个谱面")
+    else:
+        st.caption("找到了:red[0]个谱面")
     print_all(songs)
 except Exception as e:
     st.error(e)
