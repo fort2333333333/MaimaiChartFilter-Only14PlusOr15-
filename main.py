@@ -236,12 +236,10 @@ def setting():
     setting_grey = st.toggle("曲绘猜歌:显示黑白曲绘",value=st.session_state.grey)
     setting_rotate = st.toggle("曲绘猜歌:随机翻转",value=st.session_state.random_rotate)
     setting_colour = st.slider("颜色猜歌:颜色数量",min_value=1,max_value=20,value=st.session_state.colour_count)
-    setting_random_target = st.toggle("提示猜歌:随机提示",value=st.session_state.random_target)
     if st.button("保存"):
         st.session_state.search_index = setting_search_index
         st.session_state.image_size = setting_image_size
         st.session_state.grey = setting_grey
-        st.session_state.random_target = setting_random_target
         st.session_state.random_rotate = setting_rotate
         st.session_state.colour_count = setting_colour
         st.session_state.after_rerun = "保存成功!"
