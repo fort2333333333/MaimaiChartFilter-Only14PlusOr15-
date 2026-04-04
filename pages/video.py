@@ -37,14 +37,16 @@ choose_chart = ALL_TITLE.index(choose_chart)
 if st.button("播放"):
     if "video" in INFO[choose_chart]:
         st.session_state.video_link = INFO[choose_chart]["video"]
-if "video_link" in st.session_state and st.session_state.video_link:
-    st.text(f"{st.session_state.video_link}")
+if "video_link" not in st.session_state:
+    st.warning("请选择谱面")
+elif not st.session_state.video_link:
+    st.error("这首歌还没搞好")
+else:
+    st.badge(f"{st.session_state.video_link}")
     components.iframe(
         st.session_state.video_link,
         height=600
     )
-else:
-    st.error("这首歌还没搞好")
 
 col1, col2 = st.columns([6,1])
 with col2:

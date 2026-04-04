@@ -89,28 +89,38 @@ def print_cover(index):
     st.image(full_cover_path(INFO[index]["cover"]))
 
 def print_info(index):
-    st.text(f"{INFO[index]["title"]}  {INFO[index]["type"]}  {INFO[index]["difficulty"]}  lv.{INFO[index]["level"]} ({INFO[index]["internal_level"]})")
-    st.text(f"曲师: {INFO[index]["artist"]}  bpm: {INFO[index]["bpm"]}")
-    st.text(f"谱师: {INFO[index]["note_designer"]}")
-    st.text(f"日期: {INFO[index]["released_date"]} ({INFO[index]["version"]})")
-    st.text(f"tap: {INFO[index]["tap"]}  hold: {INFO[index]["hold"]}  slide: {INFO[index]["slide"]}  touch: {INFO[index]["touch"]}  break: {INFO[index]["break"]}  total: {INFO[index]["total"]}")
+    st.markdown(f"**{INFO[index]["title"]}**  *{INFO[index]["type"]}  {INFO[index]["difficulty"]}*  lv.*{INFO[index]["level"]}* (*{INFO[index]["internal_level"]}*)")
+    st.markdown(f"曲师: *{INFO[index]["artist"]}*  bpm: *{INFO[index]["bpm"]}*")
+    st.markdown(f"谱师: *{INFO[index]["note_designer"]}*")
+    st.markdown(f"日期: *{INFO[index]["released_date"]}* (*{INFO[index]["version"]}*)")
+    st.markdown(f"tap: *{INFO[index]["tap"]}*  hold: *{INFO[index]["hold"]}*  slide: *{INFO[index]["slide"]}*  touch: *{INFO[index]["touch"]}*  break: *{INFO[index]["break"]}*  total: *{INFO[index]["total"]}*")
 
 def look_chart(video_link):
     st.session_state.video_link = video_link
     st.switch_page("pages/video.py")
+
+def show_badges(items):
+    colours = {"KaleidScope":"blue", "KOP决赛曲":"yellow", "Legend曲":"orange", "完美挑战曲":"violet",
+                "project_raputa":"red", "PANDORA BOXXX":"gray", "KOP预选追加曲":"green"}
+    badge_str = " ".join([
+        f":{colours[item]}-badge[{item}]"
+        for item in items
+    ])
+    st.markdown(badge_str)
 
 def print_all(index_list):
     for index in index_list:
         col1, col2 = st.columns([1,2])
         with col1:
             print_cover(index)
-        with col2:
-            print_info(index)
             if st.button("谱面确认",key=index+1000):
                 if "video" in INFO[index]:
                     look_chart(INFO[index]["video"])
                 else:
                     st.error("没找到喵")
+        with col2:
+            print_info(index)
+            show_badges(INFO[index]["tag"])
 
 @st.dialog("随机歌曲")
 def random_song(songs):
@@ -546,7 +556,6 @@ def match_song(song_name: str, query: str, threshold: int = 60) -> bool:
 #    temp.append(f"{s["title"]} {s["difficulty"]}")
 #st.text(temp)
 
-
 col5, col6, coll = st.columns([3,6,1])
 with col5:
     st.title("请您越级")
@@ -566,7 +575,7 @@ with col3:
     filter_tag = st.multiselect("筛选系列",TAG)
 with col4:
     condition_code = st.text_area("筛选其他", height=236, help="语法为 类别 运算符 数值 例如bpm>=180, released_date<2026-01-01, break==100")
-    filter_name = st.text_input("搜索曲名(谱师)")
+    filter_name = st.text_input("搜索曲名(曲师)")
 VALID_KEY = ["bpm","released_date","break","tap","hold","slide","touch","total","version","internal_level","type"]
 if condition_code:
     try:
@@ -684,6 +693,7 @@ with col13:
         st.session_state.description_target = ALL_TARGET.copy()
         random_info(songs)
 try:
+    st.caption(f"找到了:green[{len(songs)}]个谱面")
     print_all(songs)
 except Exception as e:
     st.error(e)
