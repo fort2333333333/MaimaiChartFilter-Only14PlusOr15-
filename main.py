@@ -268,7 +268,7 @@ def get_random_hint(song):
         elif VERSION.index(INFO[song]["version"]) < VERSION.index("BUDDiES"):
             return "这歌是DX代的但是在BUDDiES前"
         else:
-            return "这歌在FESTiVAL  PLUS之后"
+            return "这歌在FESTiVAL PLUS之后"
     elif target == 1:
         if INFO[song]["internal_level"] < "14.8":
             return "这歌定数不到14.8"
@@ -548,6 +548,7 @@ def match_song(song_name: str, query: str, threshold: int = 60) -> bool:
 #    temp.append(f"{s["title"]} {s["difficulty"]}")
 #st.text(temp)
 
+st.caption("(使用电脑或者横屏访问以获得最佳体验)")
 col5, col6, coll = st.columns([3,6,1])
 with col5:
     st.title("请您越级")

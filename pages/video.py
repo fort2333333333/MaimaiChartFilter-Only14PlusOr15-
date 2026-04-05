@@ -30,6 +30,7 @@ ALL_TITLE = ['Xaleid◆scopiX Re:MASTER', '系ぎて Re:MASTER', 'PANDORA PARADO
              'TiamaT:F minor MASTER', 'Credits MASTER', 'Prophesy One MASTER', 'ガラテアの螺旋 MASTER', 'Fragrance Re:MASTER',
              'ジングルベル MASTER', '源平大戦絵巻テーマソング Re:MASTER']
 
+st.caption("(使用电脑或者横屏访问以获得最佳体验)")
 st.title("谱面播放室📽")
 INFO = load_data()
 choose_chart = st.selectbox("换一个谱面",ALL_TITLE)
