@@ -468,6 +468,7 @@ def random_info(songs):
         col111, col222 = st.columns([1,2])
         with col111:
             print_cover(st.session_state.song)
+            show_badges(INFO[st.session_state.song]["tag"])
         with col222:
             print_info(st.session_state.song)
 
