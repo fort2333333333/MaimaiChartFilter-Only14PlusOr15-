@@ -134,11 +134,11 @@ def random_song(songs):
 
 def crop_cover(index,x,y, cropped_size,g=False,rotate=False):
     cover = Image.open(full_cover_path(INFO[index]["cover"]))
+    if rotate != -1:
+        cover = cover.rotate(rotate,expand=True)
     cropped = cover.crop((x,y,x+cropped_size,y+cropped_size))
     if g:
         cropped = cropped.convert("L")
-    if rotate != -1:
-        cropped = cropped.rotate(rotate*90,expand=True)
     st.image(cropped,width=300)
 
 ALL_TITLE = ['Xaleid◆scopiX', '系ぎて', 'PANDORA PARADOXXX', '7 Wonders', "World's end BLACKBOX",
@@ -180,7 +180,7 @@ def random_cover(songs,CROP_SIZE,grey,rotate):
                 st.session_state.song = random.randint(0,87)
             st.session_state.x = random.randint(0,190-CROP_SIZE)
             st.session_state.y = random.randint(0,190-CROP_SIZE)
-            st.session_state.r = random.randint(0,3)
+            st.session_state.r = random.randint(0,360)
             st.session_state.hint = ""
     with col201:
         st.image("static/image/icon/1.png")
@@ -458,13 +458,13 @@ def random_info(songs):
             else:
                 USER_VALUE_CHOICE = ["卡BUG了"]
                 user_value = st.selectbox("问个问题", USER_VALUE_CHOICE)
-        if st.button("那我问你"):
+        if st.button("提问"):
             st.session_state.description += ("\n" + random_description(st.session_state.song,USER_TARGET_TRANS[user_target],user_value))
     if st.session_state.description:
         st.text(st.session_state.description)
     else:
-        st.text("(问个问题获取提示)")
-    if st.button("到底是什么"):
+        st.text("(↑问个问题获取提示)")
+    if st.button("我要看答案"):
         col111, col222 = st.columns([1,2])
         with col111:
             print_cover(st.session_state.song)
@@ -568,7 +568,7 @@ with col3:
     filter_charter = st.multiselect("筛选谱师",CHARTER)
     filter_tag = st.multiselect("筛选系列",TAG)
 with col4:
-    condition_code = st.text_area("筛选其他", height=236, help="语法为 类别 运算符 数值 例如bpm>=180, released_date<2026-01-01, break==100")
+    condition_code = st.text_area("高级筛选", height=236, help="语法为 类别 运算符 数值 例如bpm>=180, released_date<2026-01-01, break==100")
     filter_name = st.text_input("搜索曲名(曲师)")
 VALID_KEY = ["bpm","released_date","break","tap","hold","slide","touch","total","version","internal_level","type"]
 if condition_code:
@@ -664,7 +664,7 @@ with col11:
             st.session_state.song = random.randint(0,87)
         st.session_state.x = random.randint(0, 190 - st.session_state.image_size)
         st.session_state.y = random.randint(0, 190 - st.session_state.image_size)
-        st.session_state.r = random.randint(0,3)
+        st.session_state.r = random.randint(0,360)
         st.session_state.hint = ""
         random_cover(songs,st.session_state.image_size,st.session_state.grey,st.session_state.random_rotate)
 with col12:
